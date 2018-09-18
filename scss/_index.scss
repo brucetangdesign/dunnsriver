@@ -46,6 +46,14 @@ section#bg, section#content{
       background-image: url('../images/bg-gradient-slide2.svg');
     }
 
+    &.bg-gradient3{
+      background-image: url('../images/bg-gradient-slide3.svg');
+    }
+
+    &.bg-gradient4{
+      background-image: url('../images/bg-gradient-slide4.svg');
+    }
+
     &.hidden{
       opacity: 0;
     }

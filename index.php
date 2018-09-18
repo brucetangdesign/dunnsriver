@@ -36,30 +36,30 @@ $pageTitle = "Sweet leaf Tea";
     </section>
 
     <section class="slide-main slide2">
-      <div class="bg-graphics rellax" data-rellax-speed="2"></div>
-      <div class="slide-image-container" data-rellax-speed="0">
+      <div class="bg-graphics rellax" data-rellax-speed="5"></div>
+      <div class="slide-image-container" data-rellax-speed="3">
       </div>
-      <div class="slide-copy rellax" data-rellax-speed="1">
+      <div class="slide-copy rellax" data-rellax-speed="-2">
         <h3>Copy Here</h3>
         <h1>Copy about organics and ingredients to go here.</h1>
       </div>
     </section>
 
     <section class="slide-main slide3">
-      <div class="bg-graphics rellax" data-rellax-speed="2"></div>
-      <div class="slide-image-container" data-rellax-speed="0">
+      <div class="bg-graphics rellax" data-rellax-speed="5"></div>
+      <div class="slide-image-container" data-rellax-speed="1">
       </div>
-      <div class="slide-copy rellax" data-rellax-speed="1">
+      <div class="slide-copy rellax" data-rellax-speed="-2">
         <h3>Copy Here</h3>
         <h1>Copy about less sugar and great taste.</h1>
       </div>
     </section>
 
     <section class="slide-main slide4">
-      <div class="bg-graphics rellax" data-rellax-speed="2"></div>
+      <div class="bg-graphics rellax" data-rellax-speed="5"></div>
       <div class="slide-image-container" data-rellax-speed="0">
       </div>
-      <div class="slide-copy rellax" data-rellax-speed="-1">
+      <div class="slide-copy rellax" data-rellax-speed="-2">
         <h3>Copy Here</h3>
         <h1>Copy about Austin, TX goes here.</h1>
       </div>

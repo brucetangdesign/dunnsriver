@@ -192,6 +192,10 @@ section#bg, section#content {
     background-image: url("../images/bg-gradient-slide1.svg"); }
   #bg > div.bg-gradient2 {
     background-image: url("../images/bg-gradient-slide2.svg"); }
+  #bg > div.bg-gradient3 {
+    background-image: url("../images/bg-gradient-slide3.svg"); }
+  #bg > div.bg-gradient4 {
+    background-image: url("../images/bg-gradient-slide4.svg"); }
   #bg > div.hidden {
     opacity: 0; }
 
