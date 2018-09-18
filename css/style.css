@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Farao Black';
+  src: url("../fonts/farao_black_ot_regular.woff2") format("woff2"), url("../fonts/farao_black_ot_regular.woff") format("woff"), url("../fonts/farao_black_ot_regular.ttf") format("ttf"); }
+@font-face {
+  font-family: 'Kameron Bold';
+  src: url("../fonts/kameron-bold.woff2") format("woff2"), url("../fonts/kameron-bold.woff") format("woff"), url("../fonts/kameron-bold.ttf") format("ttf"); }
+@font-face {
+  font-family: 'Vision';
+  src: url("../fonts/vision.woff2") format("woff2"), url("../fonts/vision.woff") format("woff"), url("../fonts/vision.ttf") format("ttf"); }
+@font-face {
+  font-family: 'Vision Heavy';
+  src: url("../fonts/vision-heavy.woff2") format("woff2"), url("../fonts/vision-heavy.woff") format("woff"), url("../fonts/vision-heavy.ttf") format("ttf"); }
+html, body {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  font-family: "Vision"; }
+
+body {
+  height: 200%; }
+
+h1, h3 {
+  text-transform: uppercase; }
+
+h1 {
+  font-family: "Kameron Bold";
+  font-size: 5.5rem;
+  margin: 1rem 0;
+  line-height: 3rem; }
+
+h3 {
+  font-family: "Vision Heavy";
+  margin: 0; }
+
+header {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  -ms-align-items: flex-end;
+  -o-align-items: flex-end;
+  align-items: flex-end;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  height: 230px; }
+
+.logo-container {
+  width: 392px;
+  height: 282px;
+  background-image: radial-gradient(circle at center, #fef4cf 0%, rgba(252, 231, 154, 0.5) 20%, transparent 58%); }
+
+section {
+  width: 100%;
+  height: 100%;
+  position: fixed; }
+
+#bg {
+  transition: background-color 1s;
+  -webkit-transition: background-color 1s; }
+  #bg.slide1 {
+    background-color: #d7de2c; }
+  #bg.slide2 {
+    background-color: #dea02c; }
+
+.mimi {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  position: absolute;
+  z-index: 40;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px;
+  transform: translateY(-50%) translateX(-50%) scale(1);
+  -webkit-transform: translateY(-50%) translateX(-50%) scale(1);
+  border-radius: 50%;
+  width: 726px;
+  height: 726px;
+  overflow: hidden;
+  transition: all 1s;
+  -webkit-transition: all 1s; }
+  .mimi img {
+    width: 726px; }
+  .mimi.slide1 {
+    background-image: radial-gradient(circle at center, #FFFFFE 0%, rgba(252, 231, 154, 0.7) 35%, transparent 53%); }
+  .mimi.slide2 {
+    background-image: radial-gradient(circle at center, #FFFFFE 0%, rgba(252, 231, 154, 0.35) 35%, transparent 53%); }
+  .mimi.hidden {
+    width: 0px;
+    height: 0px;
+    transition-duration: 0s;
+    -webkit-transition-duration: 0s; }
+
+.copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  max-width: 700px;
+  z-index: 41;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  margin-left: 300px;
+  text-align: center; }
+  .copy h1, .copy h3 {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    opacity: 1;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s; }
+  .copy h1 {
+    transition-delay: 0.1s;
+    -webkit-transition-delay: 0.1s; }
+  .copy.hidden {
+    opacity: 0; }
+    .copy.hidden h1, .copy.hidden h3 {
+      transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+      opacity: 0;
+      transition-duration: 0s;
+      -webkit-transition-duration: 0s;
+      transition-delay: 0s;
+      -webkit-transition-delay: 0s; }
+
+/*# sourceMappingURL=style.css.map */
