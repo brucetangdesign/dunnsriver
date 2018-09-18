@@ -1,0 +1,56 @@
+header{
+  @include prefixr(display,flex);
+  @include prefixr(align-items,center);
+  @include prefixr(justify-content,space-between);
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 3000;
+  padding: getRem(28px) getRem(28px) 0px;
+  max-width: $site-width-max;
+}
+
+.logo-container{
+  position: relative;
+  width: 187px;
+
+  img{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  &:after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background-image: url('../images/logo-bg-gradient.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 50%;
+    top: 53%;
+    width: 154%;
+    height: 256%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+  }
+
+  @include breakpoint(xs){
+    width: 156px;
+  }
+
+  @include breakpoint(xs){
+    width: 156px;
+  }
+}
+
+nav{
+  font-family: "Vision Heavy";
+  font-size: getRem(18px);
+
+  a{
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

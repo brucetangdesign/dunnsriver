@@ -1,36 +1,46 @@
 @font-face {
   font-family: 'Farao Black';
-  src: url("../fonts/farao_black_ot_regular.woff2") format("woff2"), url("../fonts/farao_black_ot_regular.woff") format("woff"), url("../fonts/farao_black_ot_regular.ttf") format("ttf"); }
+  src: url("../webfonts/farao_black_ot_regular.woff2") format("woff2"), url("../webfonts/farao_black_ot_regular.woff") format("woff"), url("../webfonts/farao_black_ot_regular.ttf") format("ttf"); }
 @font-face {
   font-family: 'Kameron Bold';
-  src: url("../fonts/kameron-bold.woff2") format("woff2"), url("../fonts/kameron-bold.woff") format("woff"), url("../fonts/kameron-bold.ttf") format("ttf"); }
+  src: url("../webfonts/kameron-bold.woff2") format("woff2"), url("../webfonts/kameron-bold.woff") format("woff"), url("../webfonts/kameron-bold.ttf") format("ttf"); }
 @font-face {
   font-family: 'Vision';
-  src: url("../fonts/vision.woff2") format("woff2"), url("../fonts/vision.woff") format("woff"), url("../fonts/vision.ttf") format("ttf"); }
+  src: url("../webfonts/vision.woff2") format("woff2"), url("../webfonts/vision.woff") format("woff"), url("../webfonts/vision.ttf") format("ttf"); }
 @font-face {
   font-family: 'Vision Heavy';
-  src: url("../fonts/vision-heavy.woff2") format("woff2"), url("../fonts/vision-heavy.woff") format("woff"), url("../fonts/vision-heavy.ttf") format("ttf"); }
+  src: url("../webfonts/vision-heavy.woff2") format("woff2"), url("../webfonts/vision-heavy.woff") format("woff"), url("../webfonts/vision-heavy.ttf") format("ttf"); }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html, body {
   margin: 0;
   padding: 0;
   color: #FFFFFF;
-  font-family: "Vision"; }
-
-body {
-  height: 200%; }
-
-h1, h3 {
-  text-transform: uppercase; }
+  font-family: "Vision";
+  height: 100%; }
+  @media (max-width: 768px) {
+    html, body {
+      font-size: 14px; } }
 
 h1 {
   font-family: "Kameron Bold";
-  font-size: 5.5rem;
+  font-size: 4rem;
   margin: 1rem 0;
-  line-height: 3rem; }
+  line-height: 3.375rem; }
 
 h3 {
   font-family: "Vision Heavy";
   margin: 0; }
+
+ul.hr-list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  ul.hr-list li {
+    display: inline; }
 
 header {
   -webkit-display: flex;
@@ -42,41 +52,163 @@ header {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: flex-end;
-  -moz-align-items: flex-end;
-  -ms-align-items: flex-end;
-  -o-align-items: flex-end;
-  align-items: flex-end;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   text-align: center;
-  z-index: 3;
-  height: 230px; }
+  z-index: 3000;
+  padding: 1.75rem 1.75rem 0px;
+  max-width: 1920px; }
 
 .logo-container {
-  width: 392px;
-  height: 282px;
-  background-image: radial-gradient(circle at center, #fef4cf 0%, rgba(252, 231, 154, 0.5) 20%, transparent 58%); }
+  position: relative;
+  width: 187px; }
+  .logo-container img {
+    position: relative;
+    z-index: 2;
+    width: 100%; }
+  .logo-container:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    background-image: url("../images/logo-bg-gradient.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    left: 50%;
+    top: 53%;
+    width: 154%;
+    height: 256%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%); }
+  @media (max-width: 480px) {
+    .logo-container {
+      width: 156px; } }
+  @media (max-width: 480px) {
+    .logo-container {
+      width: 156px; } }
+
+nav {
+  font-family: "Vision Heavy";
+  font-size: 1.125rem; }
+  nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase; }
+
+footer {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0px 1.5625rem 1.5625rem; }
+  footer p {
+    font-family: "Vision Heavy";
+    font-size: 1.125rem;
+    margin: 0; }
+  footer a {
+    color: #FFFFFF; }
+  footer li {
+    padding-left: 10px;
+    padding-right: 10px; }
+    footer li:first-of-type {
+      padding-left: 0px; }
+    footer li:last-of-type {
+      padding-right: 0px; }
+    footer li i {
+      font-size: 1.4375rem; }
+  @media (max-width: 480px) {
+    footer {
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -o-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-flex-direction: column-reverse;
+      -moz-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      -o-flex-direction: column-reverse;
+      flex-direction: column-reverse; }
+      footer .footer-social-menu {
+        margin-bottom: 1.25rem; } }
 
 section {
   width: 100%;
-  height: 100%;
+  height: 100%; }
+
+section#bg, section#content {
   position: fixed; }
 
-#bg {
-  transition: background-color 1s;
-  -webkit-transition: background-color 1s; }
-  #bg.slide1 {
-    background-color: #d7de2c; }
-  #bg.slide2 {
-    background-color: #dea02c; }
+#bg, #bg > div {
+  transition-property: opacity, background-color;
+  -webkit-transition-property: opacity, background-color;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s; }
 
-.mimi {
+#bg.bg1 {
+  background-color: #f79d23; }
+#bg.bg2 {
+  background-color: #d7de2c; }
+#bg.bg3 {
+  background-color: #f45a4a; }
+#bg.bg4 {
+  background-color: #e8851a; }
+#bg > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1; }
+  #bg > div.bg-gradient1 {
+    background-image: url("../images/bg-gradient-slide1.svg"); }
+  #bg > div.bg-gradient2 {
+    background-image: url("../images/bg-gradient-slide2.svg"); }
+  #bg > div.hidden {
+    opacity: 0; }
+
+.honeycomb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/honeycomb.svg");
+  background-repeat: no-repeat;
+  background-size: contain; }
+  .honeycomb.reverse {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1); }
+
+.slide-main {
   -webkit-display: flex;
   -moz-display: flex;
   -ms-display: flex;
@@ -96,60 +228,69 @@ section {
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
-  position: absolute;
-  z-index: 40;
-  top: 50%;
-  left: 50%;
-  margin-left: -300px;
-  transform: translateY(-50%) translateX(-50%) scale(1);
-  -webkit-transform: translateY(-50%) translateX(-50%) scale(1);
-  border-radius: 50%;
-  width: 726px;
-  height: 726px;
-  overflow: hidden;
-  transition: all 1s;
-  -webkit-transition: all 1s; }
-  .mimi img {
-    width: 726px; }
-  .mimi.slide1 {
-    background-image: radial-gradient(circle at center, #FFFFFE 0%, rgba(252, 231, 154, 0.7) 35%, transparent 53%); }
-  .mimi.slide2 {
-    background-image: radial-gradient(circle at center, #FFFFFE 0%, rgba(252, 231, 154, 0.35) 35%, transparent 53%); }
-  .mimi.hidden {
-    width: 0px;
-    height: 0px;
-    transition-duration: 0s;
-    -webkit-transition-duration: 0s; }
+  position: relative;
+  background-color: transparent;
+  z-index: 3; }
+  .slide-main.slide1 .bg-graphics {
+    background-image: url("../images/slide1-leaves.svg"); }
+  .slide-main.slide2 .bg-graphics {
+    background-image: url("../images/slide1-leaves.svg"); }
+  .slide-main.slide3 .bg-graphics {
+    background-image: url("../images/slide1-leaves.svg"); }
+  .slide-main.slide4 .bg-graphics {
+    background-image: url("../images/slide1-leaves.svg"); }
 
-.copy {
+.bg-graphics {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  max-width: 1260px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; }
+
+.slide-image-container {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
   width: 50%;
-  max-width: 700px;
-  z-index: 41;
-  transform: translateY(-50%) translateX(-50%);
-  -webkit-transform: translateY(-50%) translateX(-50%);
-  margin-left: 300px;
-  text-align: center; }
-  .copy h1, .copy h3 {
-    transform: translateY(0%);
-    -webkit-transform: translateY(0%);
-    opacity: 1;
-    transition: all 0.4s;
-    -webkit-transition: all 0.4s; }
-  .copy h1 {
-    transition-delay: 0.1s;
-    -webkit-transition-delay: 0.1s; }
-  .copy.hidden {
-    opacity: 0; }
-    .copy.hidden h1, .copy.hidden h3 {
-      transform: translateY(100%);
-      -webkit-transform: translateY(100%);
-      opacity: 0;
-      transition-duration: 0s;
-      -webkit-transition-duration: 0s;
-      transition-delay: 0s;
-      -webkit-transition-delay: 0s; }
+  height: 100vw;
+  max-width: 600px;
+  max-height: 551px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; }
+  .slide1 .slide-image-container {
+    background-image: url("../images/bottle-fpo.png"); }
+  .slide2 .slide-image-container {
+    background-image: url("../images/bottle-fpo.png"); }
+  .slide3 .slide-image-container {
+    background-image: url("../images/bottle-fpo.png"); }
+  .slide4 .slide-image-container {
+    background-image: url("../images/bottle-fpo.png"); }
+
+.slide-copy {
+  width: 50%;
+  max-width: 650px;
+  color: #370000;
+  z-index: 2; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+footer{
+  @include prefixr(display,flex);
+  @include prefixr(align-items,center);
+  @include prefixr(justify-content,space-between);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0px getRem(25px) getRem(25px);
+
+  p{
+    font-family: "Vision Heavy";
+    font-size: getRem(18px);
+    margin: 0;
+  }
+
+  a{ color: #FFFFFF; }
+
+  li{
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:first-of-type{
+      padding-left: 0px;
+    }
+
+    &:last-of-type{
+      padding-right: 0px;
+    }
+
+    i{
+      font-size: getRem(23px);
+    }
+  }
+
+  @include breakpoint(xs){
+    @include prefixr(flex-wrap,wrap);
+    @include prefixr(flex-direction,column-reverse);
+
+    .footer-social-menu{
+      margin-bottom: getRem(20px);
+    }
+  }
+}

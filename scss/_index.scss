@@ -1,0 +1,152 @@
+section{
+  width: 100%;
+  height: 100%;
+}
+
+section#bg, section#content{
+  position: fixed;
+}
+
+#bg, #bg > div{
+  transition-property: opacity, background-color;
+  -webkit-transition-property: opacity, background-color;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+}
+
+#bg{
+  &.bg1{
+    background-color: #f79d23;
+  }
+  &.bg2{
+    background-color: #d7de2c;
+  }
+  &.bg3{
+    background-color: #f45a4a;
+  }
+  &.bg4{
+    background-color: #e8851a;
+  }
+
+  > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+
+    &.bg-gradient1{
+      background-image: url('../images/bg-gradient-slide1.svg');
+    }
+
+    &.bg-gradient2{
+      background-image: url('../images/bg-gradient-slide2.svg');
+    }
+
+    &.hidden{
+      opacity: 0;
+    }
+  }
+}
+
+.honeycomb{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/honeycomb.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.reverse{
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+  }
+}
+
+.slide-main{
+  @include prefixr(display,flex);
+  @include prefixr(justify-content,center);
+  @include prefixr(align-items,center);
+  position: relative;
+  background-color: transparent;
+  z-index: 3;
+
+  &.slide1{
+    .bg-graphics{
+      background-image: url('../images/slide1-leaves.svg');
+    }
+  }
+
+  &.slide2{
+    .bg-graphics{
+      background-image: url('../images/slide1-leaves.svg');
+    }
+  }
+
+  &.slide3{
+    .bg-graphics{
+      background-image: url('../images/slide1-leaves.svg');
+    }
+  }
+
+  &.slide4{
+    .bg-graphics{
+      background-image: url('../images/slide1-leaves.svg');
+    }
+  }
+}
+
+.bg-graphics{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  max-width: 1260px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.slide-image-container{
+  @include prefixr(display,flex);
+  @include prefixr(justify-content,center);
+  @include prefixr(align-items,center);
+  width: 50%;
+  height: 100vw;
+  max-width: 600px;
+  max-height: 551px;
+  z-index: 2;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  .slide1 &{
+    background-image: url('../images/bottle-fpo.png');
+
+  }
+
+  .slide2 &{
+    background-image: url('../images/bottle-fpo.png');
+  }
+
+  .slide3 &{
+    background-image: url('../images/bottle-fpo.png');
+  }
+
+  .slide4 &{
+    background-image: url('../images/bottle-fpo.png');
+  }
+}
+
+.slide-copy{
+  width: 50%;
+  max-width: 650px;
+  color: $sl-brown;
+  z-index: 2;
+}

@@ -1,0 +1,85 @@
+//browser prefixes
+@mixin prefixr($property, $value, $prefixes: (webkit, moz, ms, o) ) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: #{$value};
+  }
+  @if($property==display and $value==flex){
+    @each $prefix in $prefixes {
+      #{$property}: -#{$prefix}-#{$value};
+    }
+  }
+  #{$property}: #{$value};
+}
+
+//Responsive breakpoints
+@mixin breakpoint($point) {
+  @if $point == xxl-up {
+    @media (min-width: 1450px) { @content; }
+  }
+
+  @if $point == xxl {
+    @media (max-width: 1450px) { @content; }
+  }
+
+  @if $point == xl {
+    @media (min-width: 1281px) { @content; }
+  }
+
+  @if $point == l {
+    @media (max-width: 1280px) { @content; }
+  }
+
+  @if $point == m-l-up {
+    @media (min-width: 1189px) { @content; }
+  }
+
+  @if $point == m-l {
+    @media (max-width: 1188px) { @content; }
+  }
+
+  @if $point == m-up {
+    @media (min-width: 1021px) { @content; }
+  }
+
+  @if $point == m {
+    @media (max-width: 1020px) { @content; }
+  }
+
+  @if $point == m-s-up {
+    @media (min-width: 961px) { @content; }
+  }
+
+  @if $point == m-s {
+    @media (max-width: 960px) { @content; }
+  }
+
+  @if $point == s-up {
+    @media (min-width: 769px) { @content; }
+  }
+
+  @if $point == s {
+    @media (max-width: 768px) { @content; }
+  }
+
+  @if $point == xs-640-up {
+    @media (min-width: 641px) { @content; }
+  }
+
+  @if $point == xs-640 {
+    @media (max-width: 640px) { @content; }
+  }
+
+  @if $point == xs-up {
+    @media (min-width: 481px) { @content; }
+  }
+
+  @if $point == xs {
+    @media (max-width: 480px) { @content; }
+  }
+}
+
+//Rem calculator
+@function getRem($size) {
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+}

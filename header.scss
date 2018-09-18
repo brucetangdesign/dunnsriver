@@ -1,0 +1,16 @@
+header{
+  @include prefixr(display,flex);
+  @include prefixr(justify-content,center);
+  @include prefixr(align-items,flex-end);
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+  height: 230px;
+}
+
+.logo-container{
+  width: 392px;
+  height: 282px;
+  background-image: radial-gradient(circle at center, #fef4cf 0%, rgba(252,231,154,0.5) 20%, transparent 58%);
+}
