@@ -36,8 +36,8 @@ $page = "home-page";
         <div class="slide-image"></div>
       </div>
       <div class="slide-copy" data-rellax-speed="-2">
-        <h3>Copy Here</h3>
         <h1>Headline</h1>
+        <a class="button" href="#">Learn More</a>
       </div>
     </section>
 
@@ -47,8 +47,8 @@ $page = "home-page";
         <div class="slide-image"></div>
       </div>
       <div class="slide-copy rellax" data-rellax-speed="-2">
-        <h3>Copy Here</h3>
         <h1>Copy about organics and ingredients to go here.</h1>
+        <a class="button" href="#">Learn More</a>
       </div>
     </section>
 
@@ -58,8 +58,8 @@ $page = "home-page";
         <div class="slide-image"></div>
       </div>
       <div class="slide-copy rellax" data-rellax-speed="-2">
-        <h3>Copy Here</h3>
         <h1>Copy about less sugar and great taste.</h1>
+        <a class="button" href="#">Learn More</a>
       </div>
     </section>
 
@@ -69,8 +69,8 @@ $page = "home-page";
         <div class="slide-image"></div>
       </div>
       <div class="slide-copy rellax" data-rellax-speed="-2">
-        <h3>Copy Here</h3>
         <h1>Copy about Austin, TX goes here.</h1>
+        <a class="button" href="#">Learn More</a>
       </div>
     </section>
 

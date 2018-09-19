@@ -451,6 +451,8 @@ footer {
       max-width: 100%;
       transform: none !important;
       -webkit-transform: none !important; } }
+  .slide-copy .button {
+    margin-top: 1rem; }
 
 #about-products.slide-main {
   display: block;
