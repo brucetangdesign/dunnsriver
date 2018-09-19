@@ -61,12 +61,12 @@
     @media (max-width: 768px) { @content; }
   }
 
-  @if $point == xs-640-up {
-    @media (min-width: 641px) { @content; }
+  @if $point == xs-680-up {
+    @media (min-width: 681px) { @content; }
   }
 
-  @if $point == xs-640 {
-    @media (max-width: 640px) { @content; }
+  @if $point == xs-680 {
+    @media (max-width: 680px) { @content; }
   }
 
   @if $point == xs-up {

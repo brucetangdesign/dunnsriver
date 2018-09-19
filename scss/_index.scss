@@ -5,6 +5,7 @@ section{
 
 section#bg, section#content{
   position: fixed;
+  top: 0;
 }
 
 #bg, #bg > div{
@@ -64,15 +65,30 @@ section#bg, section#content{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   background-image: url('../images/honeycomb.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 
   &.reverse{
+    left: auto;
+    right: 0;
     transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
+  }
+
+  @include breakpoint(s){
+    background-size: cover;
+  }
+
+  @include breakpoint(xs-680){
+    width: 100%;
+    background-position-x: 70%;
+  }
+
+  @include breakpoint(xs){
+    background-position-x: 50%;
   }
 }
 
@@ -80,13 +96,39 @@ section#bg, section#content{
   @include prefixr(display,flex);
   @include prefixr(justify-content,center);
   @include prefixr(align-items,center);
+  width: 64%;
+  max-width: $container-width-max;
+  margin: auto;
   position: relative;
   background-color: transparent;
   z-index: 3;
 
+  @include breakpoint(l){
+    width: 88%;
+  }
+
+  @include breakpoint(xs-680){
+    @include prefixr(flex-direction,column);
+    width: 100%;
+    padding: 2rem;
+
+    &.slide1{
+      padding-top: 0;
+      margin-top: -40px;
+    }
+  }
+
   &.slide1{
     .bg-graphics{
       background-image: url('../images/slide1-leaves.svg');
+    }
+
+    @include breakpoint(xs-680-up){
+      margin-top: 2.5rem;
+    }
+
+    @include breakpoint(m-s-up){
+      margin-top: auto;
     }
   }
 
@@ -122,21 +164,36 @@ section#bg, section#content{
 
 .slide-image-container{
   @include prefixr(display,flex);
-  @include prefixr(justify-content,center);
+  @include prefixr(justify-content,right);
   @include prefixr(align-items,center);
   width: 50%;
-  height: 100vw;
-  max-width: 600px;
-  max-height: 551px;
+  height: 100%;
   z-index: 2;
 
+  @include breakpoint(xs-680){
+    @include prefixr(justify-content,center);
+    width: 100%;
+    height: 54vh;
+    margin-bottom: 20px;
+  }
+}
+
+.slide-image{
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 70%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: contain;
+
+  @include breakpoint(xs-680){
+    background-position: center;
+    max-height: 100vh;
+  }
 
   .slide1 &{
     background-image: url('../images/bottle-fpo.png');
-
   }
 
   .slide2 &{
@@ -157,4 +214,12 @@ section#bg, section#content{
   max-width: 650px;
   color: $sl-brown;
   z-index: 2;
+
+  @include breakpoint(xs-680){
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
 }

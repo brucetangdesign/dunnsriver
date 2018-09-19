@@ -2,7 +2,7 @@ footer{
   @include prefixr(display,flex);
   @include prefixr(align-items,center);
   @include prefixr(justify-content,space-between);
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   padding: 0px getRem(25px) getRem(25px);

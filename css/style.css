@@ -28,8 +28,20 @@ html, body {
 h1 {
   font-family: "Kameron Bold";
   font-size: 4rem;
-  margin: 1rem 0;
-  line-height: 3.375rem; }
+  line-height: 3.375rem;
+  margin: 1rem 0; }
+  @media (max-width: 1280px) {
+    h1 {
+      font-size: 3.375rem;
+      line-height: 2.8125rem; } }
+  @media (max-width: 1020px) {
+    h1 {
+      font-size: 3rem;
+      line-height: 2.5rem; } }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+      line-height: 1.9375rem; } }
 
 h3 {
   font-family: "Vision Heavy";
@@ -63,11 +75,18 @@ header {
   -o-justify-content: space-between;
   justify-content: space-between;
   position: fixed;
+  top: 0;
   width: 100%;
   text-align: center;
   z-index: 3000;
   padding: 1.75rem 1.75rem 0px;
   max-width: 1920px; }
+  @media (max-width: 768px) {
+    header {
+      position: absolute; } }
+  @media (max-width: 680px) {
+    header {
+      position: relative; } }
 
 .logo-container {
   position: relative;
@@ -89,12 +108,12 @@ header {
     height: 256%;
     transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%); }
+  @media (max-width: 768px) {
+    .logo-container {
+      width: 146px; } }
   @media (max-width: 480px) {
     .logo-container {
-      width: 156px; } }
-  @media (max-width: 480px) {
-    .logo-container {
-      width: 156px; } }
+      width: 120px; } }
 
 nav {
   font-family: "Vision Heavy";
@@ -124,7 +143,7 @@ footer {
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   padding: 0px 1.5625rem 1.5625rem; }
@@ -163,7 +182,8 @@ section {
   height: 100%; }
 
 section#bg, section#content {
-  position: fixed; }
+  position: fixed;
+  top: 0; }
 
 #bg, #bg > div {
   transition-property: opacity, background-color;
@@ -203,14 +223,26 @@ section#bg, section#content {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   background-image: url("../images/honeycomb.svg");
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: cover; }
   .honeycomb.reverse {
+    left: auto;
+    right: 0;
     transform: scaleX(-1);
     -webkit-transform: scaleX(-1); }
+  @media (max-width: 768px) {
+    .honeycomb {
+      background-size: cover; } }
+  @media (max-width: 680px) {
+    .honeycomb {
+      width: 100%;
+      background-position-x: 70%; } }
+  @media (max-width: 480px) {
+    .honeycomb {
+      background-position-x: 50%; } }
 
 .slide-main {
   -webkit-display: flex;
@@ -232,11 +264,35 @@ section#bg, section#content {
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
+  width: 64%;
+  max-width: 1280px;
+  margin: auto;
   position: relative;
   background-color: transparent;
   z-index: 3; }
+  @media (max-width: 1280px) {
+    .slide-main {
+      width: 88%; } }
+  @media (max-width: 680px) {
+    .slide-main {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -o-flex-direction: column;
+      flex-direction: column;
+      width: 100%;
+      padding: 2rem; }
+      .slide-main.slide1 {
+        padding-top: 0;
+        margin-top: -40px; } }
   .slide-main.slide1 .bg-graphics {
     background-image: url("../images/slide1-leaves.svg"); }
+  @media (min-width: 681px) {
+    .slide-main.slide1 {
+      margin-top: 2.5rem; } }
+  @media (min-width: 961px) {
+    .slide-main.slide1 {
+      margin-top: auto; } }
   .slide-main.slide2 .bg-graphics {
     background-image: url("../images/slide1-leaves.svg"); }
   .slide-main.slide3 .bg-graphics {
@@ -264,31 +320,49 @@ section#bg, section#content {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
+  -webkit-justify-content: right;
+  -moz-justify-content: right;
+  -ms-justify-content: right;
+  -o-justify-content: right;
+  justify-content: right;
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
   width: 50%;
-  height: 100vw;
-  max-width: 600px;
-  max-height: 551px;
-  z-index: 2;
+  height: 100%;
+  z-index: 2; }
+  @media (max-width: 680px) {
+    .slide-image-container {
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      width: 100%;
+      height: 54vh;
+      margin-bottom: 20px; } }
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  max-width: 700px;
+  max-height: 70%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: contain; }
-  .slide1 .slide-image-container {
+  @media (max-width: 680px) {
+    .slide-image {
+      background-position: center;
+      max-height: 100vh; } }
+  .slide1 .slide-image {
     background-image: url("../images/bottle-fpo.png"); }
-  .slide2 .slide-image-container {
+  .slide2 .slide-image {
     background-image: url("../images/bottle-fpo.png"); }
-  .slide3 .slide-image-container {
+  .slide3 .slide-image {
     background-image: url("../images/bottle-fpo.png"); }
-  .slide4 .slide-image-container {
+  .slide4 .slide-image {
     background-image: url("../images/bottle-fpo.png"); }
 
 .slide-copy {
@@ -296,5 +370,12 @@ section#bg, section#content {
   max-width: 650px;
   color: #370000;
   z-index: 2; }
+  @media (max-width: 680px) {
+    .slide-copy {
+      text-align: center;
+      width: 100%;
+      max-width: 100%;
+      transform: none !important;
+      -webkit-transform: none !important; } }
 
 /*# sourceMappingURL=style.css.map */

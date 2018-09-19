@@ -19,8 +19,23 @@ html,body{
 h1{
   font-family: "Kameron Bold";
   font-size: getRem(64px);
-  margin: 1rem 0;
   line-height: getRem(54px);
+  margin: 1rem 0;
+
+  @include breakpoint(l){
+    font-size: getRem(54px);
+    line-height: getRem(45px);
+  }
+
+  @include breakpoint(m){
+    font-size: getRem(48px);
+    line-height: getRem(40px);
+  }
+
+  @include breakpoint(s){
+    font-size: getRem(32px);
+    line-height: getRem(31px);
+  }
 }
 
 h3{

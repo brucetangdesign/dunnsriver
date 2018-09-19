@@ -3,11 +3,20 @@ header{
   @include prefixr(align-items,center);
   @include prefixr(justify-content,space-between);
   position: fixed;
+  top: 0;
   width: 100%;
   text-align: center;
   z-index: 3000;
   padding: getRem(28px) getRem(28px) 0px;
   max-width: $site-width-max;
+
+  @include breakpoint(s){
+    position: absolute;
+  }
+
+  @include breakpoint(xs-680){
+    position: relative;
+  }
 }
 
 .logo-container{
@@ -35,12 +44,12 @@ header{
     -webkit-transform: translateX(-50%) translateY(-50%);
   }
 
-  @include breakpoint(xs){
-    width: 156px;
+  @include breakpoint(s){
+    width: 146px;
   }
 
   @include breakpoint(xs){
-    width: 156px;
+    width: 120px;
   }
 }
 

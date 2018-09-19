@@ -28,8 +28,9 @@ $pageTitle = "Sweet leaf Tea";
     <section class="slide-main slide1">
       <div class="bg-graphics rellax" data-rellax-speed="5"></div>
       <div class="slide-image-container" data-rellax-speed="3">
+        <div class="slide-image"></div>
       </div>
-      <div class="slide-copy rellax" data-rellax-speed="-2">
+      <div class="slide-copy" data-rellax-speed="-2">
         <h3>Copy Here</h3>
         <h1>Headline</h1>
       </div>
@@ -38,6 +39,7 @@ $pageTitle = "Sweet leaf Tea";
     <section class="slide-main slide2">
       <div class="bg-graphics rellax" data-rellax-speed="5"></div>
       <div class="slide-image-container" data-rellax-speed="3">
+        <div class="slide-image"></div>
       </div>
       <div class="slide-copy rellax" data-rellax-speed="-2">
         <h3>Copy Here</h3>
@@ -48,6 +50,7 @@ $pageTitle = "Sweet leaf Tea";
     <section class="slide-main slide3">
       <div class="bg-graphics rellax" data-rellax-speed="5"></div>
       <div class="slide-image-container" data-rellax-speed="1">
+        <div class="slide-image"></div>
       </div>
       <div class="slide-copy rellax" data-rellax-speed="-2">
         <h3>Copy Here</h3>
@@ -58,6 +61,7 @@ $pageTitle = "Sweet leaf Tea";
     <section class="slide-main slide4">
       <div class="bg-graphics rellax" data-rellax-speed="5"></div>
       <div class="slide-image-container" data-rellax-speed="0">
+        <div class="slide-image"></div>
       </div>
       <div class="slide-copy rellax" data-rellax-speed="-2">
         <h3>Copy Here</h3>
