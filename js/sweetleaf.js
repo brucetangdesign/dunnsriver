@@ -18,7 +18,7 @@ $( document ).ready(function() {
 
   function checkScroll(){
     $(".slide-main").each(function(index){
-      if($("body").isInView($(this))){
+      if($("body").isInView($(this),$(window).height()-200)){
         if(!eval("sec" + (index + 1))){
           showSection(index + 1);
         }

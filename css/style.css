@@ -322,6 +322,12 @@ footer {
   background-image: url("../images/austin-bg.png");
   background-size: contain;
   background-position: center 80px; }
+  @media (max-width: 1020px) {
+    .austin-bg {
+      background-size: 150vw; } }
+  @media (max-width: 680px) {
+    .austin-bg {
+      background-size: 200vw; } }
 
 .slide-main {
   -webkit-display: flex;

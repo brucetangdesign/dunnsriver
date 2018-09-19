@@ -111,6 +111,14 @@
   background-image: url('../images/austin-bg.png');
   background-size: contain;
   background-position: center 80px;
+
+  @include breakpoint(m){
+    background-size: 150vw;
+  }
+
+  @include breakpoint(xs-680){
+    background-size: 200vw;
+  }
 }
 
 .slide-main{
