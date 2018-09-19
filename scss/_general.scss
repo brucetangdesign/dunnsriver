@@ -9,7 +9,7 @@ html,body{
   padding: 0;
   color: #FFFFFF;
   font-family: "Vision";
-  height: 100%;
+  background-color: $sl-orange;
 
   @include breakpoint(s){
     font-size: $mobile-font-size;
