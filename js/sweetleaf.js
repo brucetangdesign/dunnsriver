@@ -6,6 +6,7 @@ $( document ).ready(function() {
   var sec2 = false;
   var sec3 = false;
   var sec4 = false;
+  var sec5 = false;
   var breakpoints = [];
   var offset = breakpointInt;
   var $bg = $("#bg");

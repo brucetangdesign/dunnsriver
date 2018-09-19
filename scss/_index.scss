@@ -13,8 +13,8 @@
 #bg, #bg > div{
   transition-property: opacity, background-color;
   -webkit-transition-property: opacity, background-color;
-  transition-duration: 1s;
-  -webkit-transition-duration: 1s;
+  transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
   padding: 0;
 }
 
@@ -30,6 +30,9 @@
   }
   &.bg4{
     background-color: #e8851a;
+  }
+  &.bg5{
+    background-color: $sl-orange;
   }
 
   > div{
@@ -58,20 +61,29 @@
       background-image: url('../images/bg-gradient-slide4.svg');
     }
 
+    &.bg-gradient5{
+      background-image: url('../images/bg-gradient-slide1.svg');
+    }
+
     &.hidden{
       opacity: 0;
     }
   }
 }
 
-.honeycomb{
+.honeycomb, .austin-bg{
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  background-image: url('../images/honeycomb.svg');
+
   background-repeat: no-repeat;
+}
+
+.honeycomb{
+  width: 50%;
+  background-image: url('../images/honeycomb.svg');
   background-size: cover;
 
   &.reverse{
@@ -93,6 +105,12 @@
   @include breakpoint(xs){
     background-position-x: 50%;
   }
+}
+
+.austin-bg{
+  background-image: url('../images/austin-bg.png');
+  background-size: contain;
+  background-position: center 80px;
 }
 
 .slide-main{
@@ -212,6 +230,18 @@
   .slide4 &{
     background-image: url('../images/bottle-fpo.png');
   }
+
+  .core &{
+    background-image: url('../images/home-about-core.png');
+  }
+
+  .semisweet &{
+    background-image: url('../images/home-about-semisweet.png');
+  }
+
+  .unsweet &{
+    background-image: url('../images/home-about-unsweet.png');
+  }
 }
 
 .slide-copy{
@@ -226,5 +256,72 @@
     max-width: 100%;
     transform: none !important;
     -webkit-transform: none !important;
+  }
+}
+
+#about-products.slide-main{
+  display: block;
+  width: 100%;
+  max-width: $container-width-max;
+  margin-left: auto;
+  margin-bottom: 3rem;
+  height: auto;
+  padding-top: 3.5rem;
+
+  h1{
+    color: $sl-brown;
+  }
+
+  > div{
+    text-align: center;
+  }
+
+  .button{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.about-products-main{
+  img{
+    display: block;
+    width: 77vw;
+    max-width: 1477px;
+    margin: 3rem auto 0;
+  }
+}
+
+.about-products-subs{
+  padding: 0 2rem;
+
+  .slide-image-container{
+    height: auto;
+  }
+
+  .slide-image{
+    height: 38vw;
+    max-height: 590px;
+    min-height: 250px;
+
+    @include breakpoint(xs-680){
+      background-position: top center;
+    }
+  }
+}
+
+.about-product-content{
+  @include prefixr(display, flex);
+  @include prefixr(justify-content, center);
+  @include prefixr(align-items, center);
+
+  &:nth-child(even){
+    @include breakpoint(xs-680-up){
+      @include prefixr(flex-direction, row-reverse);
+    }
+  }
+
+  @include breakpoint(xs-680){
+    @include prefixr(flex-direction, column-reverse);
+    padding-top: 3.5rem;
   }
 }

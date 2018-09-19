@@ -24,6 +24,9 @@ $page = "home-page";
       </div>
       <div class="bg-gradient3 hidden"></div>
       <div class="bg-gradient4 hidden"></div>
+      <div class="bg-gradient5 hidden">
+        <div class="austin-bg"></div>
+      </div>
     </section>
 
     <!-- Main Slides -->
@@ -71,6 +74,39 @@ $page = "home-page";
       </div>
     </section>
 
+    <section id="about-products" class="slide-main slide5">
+      <div class="about-products-main">
+        <h1>Our famous recipe,<br>just for you!</h1>
+        <a class="button" href="about.php">Tell Me More</a>
+        <img src="images/home-products-main.png">
+      </div>
+      <div class="about-products-subs">
+        <div class="about-product-content">
+          <div class="slide-image-container core">
+            <div class="slide-image"></div>
+          </div>
+          <div class="slide-copy rellax">
+            <h1>Core Teas</h1>
+          </div>
+        </div>
+        <div class="about-product-content">
+          <div class="slide-image-container semisweet">
+            <div class="slide-image"></div>
+          </div>
+          <div class="slide-copy rellax">
+            <h1>Semisweet Teas</h1>
+          </div>
+        </div>
+        <div class="about-product-content">
+          <div class="slide-image-container unsweet">
+            <div class="slide-image"></div>
+          </div>
+          <div class="slide-copy rellax">
+            <h1>Unsweet Teas</h1>
+          </div>
+        </div>
+      </div>
+    </section>
     <?php include 'footer.php'; ?>
   </body>
 </html>
