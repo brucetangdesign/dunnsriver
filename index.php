@@ -3,6 +3,8 @@
 <?php
 //Page title
 $pageTitle = "Sweet leaf Tea";
+$headerClass="fixed";
+$page = "home-page";
 ?>
 
 <html lang="en">
@@ -10,7 +12,7 @@ $pageTitle = "Sweet leaf Tea";
     <?php include 'head.php'; ?>
   </head>
 
-  <body>
+  <body id="<?php echo $page; ?>">
     <?php include 'header.php'; ?>
     <!-- Backgrounds -->
     <section id="bg" class="bg1">

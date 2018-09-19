@@ -2,7 +2,7 @@ header{
   @include prefixr(display,flex);
   @include prefixr(align-items,center);
   @include prefixr(justify-content,space-between);
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   text-align: center;
@@ -10,12 +10,13 @@ header{
   padding: getRem(28px) getRem(28px) 0px;
   max-width: $site-width-max;
 
-  @include breakpoint(s){
-    position: absolute;
-  }
-
-  @include breakpoint(xs-680){
-    position: relative;
+  &.fixed{
+    @include breakpoint(xs-680-up){
+      position: absolute;
+    }
+    @include breakpoint(s-up){
+      position: fixed;
+    }
   }
 }
 

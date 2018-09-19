@@ -30,17 +30,37 @@ h1{
   @include breakpoint(m){
     font-size: getRem(48px);
     line-height: getRem(40px);
+    margin: 0.75rem 0;
   }
 
   @include breakpoint(s){
     font-size: getRem(32px);
     line-height: getRem(31px);
+    margin: 0.5rem 0;
   }
 }
 
-h3{
+h2, h3{
   font-family: "Vision Heavy";
   margin: 0;
+}
+
+h2{
+  font-size: getRem(32px);
+  letter-spacing: -1px;
+
+  @include breakpoint(l){
+    font-size: getRem(26px);
+  }
+
+  @include breakpoint(s){
+    font-size: getRem(24px);
+  }
+}
+
+p{
+  font-size: getRem(20px);
+  line-height: 1.5;
 }
 
 ul.hr-list{
@@ -49,5 +69,20 @@ ul.hr-list{
   list-style: none;
   li{
     display: inline;
+  }
+}
+
+section{
+  padding: 2rem;
+  margin: auto;
+}
+
+.red-arrow{
+  width: getRem(60px);
+  height: getRem(54px);
+
+  @include breakpoint(xs-680){
+    width: getRem(38px);
+    height: getRem(28.5px);
   }
 }
