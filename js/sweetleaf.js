@@ -13,6 +13,10 @@ $( document ).ready(function() {
 
   //call the check when you scroll or resize
   $(window).on("resize scroll", function(){
+    checkScroll();
+  });
+
+  function checkScroll(){
     $(".slide-main").each(function(index){
       if($("body").isInView($(this))){
         if(!eval("sec" + (index + 1))){
@@ -20,7 +24,7 @@ $( document ).ready(function() {
         }
       }
     });
-  });
+  }
 
   function showSection(secNum){
     $bg.removeClass();
