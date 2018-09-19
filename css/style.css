@@ -481,7 +481,7 @@ footer {
   .about-products-subs .slide-image {
     height: 38vw;
     max-height: 590px;
-    min-height: 250px; }
+    min-height: 186px; }
     @media (max-width: 680px) {
       .about-products-subs .slide-image {
         background-position: top center; } }
