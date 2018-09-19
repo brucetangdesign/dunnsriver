@@ -14,7 +14,7 @@
   </div>
   <nav>
     <ul class="hr-list">
-      <li><a href="about.php">About</a></li>
+      <li><a href="about.php" <?php if($page=="about-page"){ echo "class='selected'"; }?>>About</a></li>
     </ul>
   </nav>
 </header>

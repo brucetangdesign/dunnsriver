@@ -62,5 +62,19 @@ nav{
     color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
+
+    transition: all 200ms;
+    -webkit-transition: all 200ms;
+
+    &:hover, &.selected{
+      opacity: 0.6;
+
+      transition: all 200ms;
+      -webkit-transition: all 200ms;
+    }
+
+    &.selected{
+      pointer-events: none;
+    }
   }
 }
