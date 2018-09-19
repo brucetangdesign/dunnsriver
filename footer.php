@@ -1,4 +1,4 @@
-<footer>
+<footer <?php if(isset($footerClass)){ echo "class=".$footerClass; }?>>
   <p>&copy; <?php echo date("Y"); ?> Sweet Leaf Tea</p>
   <ul class="hr-list footer-social-menu">
     <li><a href="https://www.facebook.com/sweetleaftea/" target="_blank"><i class="fab fa-facebook"></i></a></li>

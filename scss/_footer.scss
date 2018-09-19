@@ -3,9 +3,21 @@ footer{
   @include prefixr(align-items,center);
   @include prefixr(justify-content,space-between);
   position: relative;
-  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  z-index: 3000;
   padding: 0px getRem(25px) getRem(25px);
+  max-width: $site-width-max;
+
+  &.fixed{
+    @include breakpoint(s-up){
+      position: fixed;
+      bottom: 0;
+    }
+  }
 
   p{
     font-family: "Vision Heavy";

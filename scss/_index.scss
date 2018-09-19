@@ -188,7 +188,7 @@
 
 .slide-image-container{
   @include prefixr(display,flex);
-  @include prefixr(justify-content,right);
+  @include prefixr(justify-content,flex-end);
   @include prefixr(align-items,center);
   width: 50%;
   height: 100%;
@@ -322,6 +322,14 @@
   &:nth-child(even){
     @include breakpoint(xs-680-up){
       @include prefixr(flex-direction, row-reverse);
+
+      .slide-image-container{
+        @include prefixr(justify-content,flex-start);
+      }
+
+      .slide-image{
+        background-position: left;
+      }
     }
   }
 
