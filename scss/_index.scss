@@ -144,10 +144,6 @@
     }
   }
 
-  h3{
-    text-transform: uppercase;
-  }
-
   &.slide1{
     .bg-graphics{
       background-image: url('../images/slide1-leaves.svg');
@@ -317,25 +313,6 @@
   height: auto;
   min-height: 100vh;
 
-  h1{
-    font-size: getRem(80px);
-    margin: 1rem 0;
-
-    @include breakpoint(l){
-      font-size: getRem(67px);
-    }
-
-    @include breakpoint(m){
-      font-size: getRem(56px);
-      margin: 0.75rem 0;
-    }
-
-    @include breakpoint(s){
-      font-size: getRem(44px);
-      margin: 0.5rem 0;
-    }
-  }
-
   .slide-image-container{
     width: 100%;
   }
@@ -345,6 +322,7 @@
     padding-top: 21vh;
     padding-left: 0;
     text-align: center;
+    margin-bottom: 2rem;
   }
 }
 

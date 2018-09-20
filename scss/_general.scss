@@ -17,24 +17,28 @@ html,body{
   }
 }
 
+h1,h2,h3,h4,h5{
+  font-weight: normal;
+}
+
 h1{
   font-family: "Farao Black";
-  font-size: getRem(60px);
-  line-height: 1.05;
+  font-size: getRem(50px);
+  line-height: 1.2;
   letter-spacing: 2px;
   margin: 1rem 0;
 
   @include breakpoint(l){
-    font-size: getRem(50px);
+    font-size: getRem(42px);
   }
 
   @include breakpoint(m){
-    font-size: getRem(42px);
+    font-size: getRem(35px);
     margin: 0.75rem 0;
   }
 
   @include breakpoint(s){
-    font-size: getRem(36px);
+    font-size: getRem(30px);
     margin: 0.5rem 0;
   }
 }
@@ -81,32 +85,24 @@ p{
   line-height: 1.5;
 }
 
+p.subtitle, .subtitle{
+  font-family: "Vision Heavy";
+  font-size: getRem(30px);
+  margin: auto;
+
+  @include breakpoint(l){
+    font-size: getRem(26px);
+  }
+
+  @include breakpoint(s){
+    font-size: getRem(24px);
+  }
+}
+
 ul{
   margin: 0;
   padding: 0;
   padding-inline-start: 20px;
-  //list-style-type: none;
-
-  li{
-    /*
-    position: relative;
-    padding-left: 20px;
-
-
-    &:before{
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      border-radius: 50px;
-      background-color: $sl-brown;
-      width: getRem(8px);
-      height: getRem(8px);
-    }
-    */
-  }
 }
 
 ul.hr-list{
@@ -185,4 +181,8 @@ section{
     transition: all 200ms ease-out;
     -webkit-transition: all 200ms ease-out;
   }
+}
+
+.uppercase{
+  text-transform: uppercase;
 }

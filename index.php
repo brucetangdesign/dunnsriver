@@ -36,8 +36,9 @@ $page = "home-page";
         <div class="slide-image"></div>
       </div>
       <div class="slide-copy" data-rellax-speed="-2">
-        <h3>Sweet Leaf Is</h3>
+        <h3 class="uppercase">Sweet Leaf Is</h3>
         <h1>Sweet...but<br>not too sweet.</h1>
+        <p class="subtitle">Sentence Here</p>
       </div>
     </section>
 
@@ -50,6 +51,7 @@ $page = "home-page";
       </div>
       <div class="slide-copy rellax" data-rellax-speed="-2">
         <h1>Copy about organics and ingredients to go here.</h1>
+        <p class="subtitle">Sentence Here</p>
         <a class="button" href="#">Learn More</a>
       </div>
     </section>
@@ -67,6 +69,7 @@ $page = "home-page";
       </div>
       <div class="slide-copy rellax" data-rellax-speed="-2">
         <h1>Copy about less sugar and great taste.</h1>
+        <p class="subtitle">Sentence Here</p>
         <a class="button" href="#">Our Story</a>
       </div>
     </section>
@@ -84,7 +87,7 @@ $page = "home-page";
             <div class="slide-image"></div>
           </div>
           <div class="slide-copy rellax">
-            <h2>Core Teas</h2>
+            <h1>Core Teas</h1>
             <ul>
               <li>Cut Sugar and Calories by 25%</li>
               <li>50 Calories per serving</li>
@@ -96,7 +99,7 @@ $page = "home-page";
             <div class="slide-image"></div>
           </div>
           <div class="slide-copy rellax">
-            <h2>Semisweet Teas</h2>
+            <h1>Semisweet Teas</h1>
             <ul>
               <li>Under 10 grams of Sugar</li>
               <li>50 calories per serving</li>
@@ -108,7 +111,7 @@ $page = "home-page";
             <div class="slide-image"></div>
           </div>
           <div class="slide-copy rellax">
-            <h2>Unsweet Teas</h2>
+            <h1>Unsweet Teas</h1>
             <ul>
               <li>ZERO SUGAR</li>
               <li>5 Calories per serving</li>
