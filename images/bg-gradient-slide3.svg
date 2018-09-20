@@ -6,12 +6,11 @@
 	.st0{fill:url(#SVGID_1_);}
 </style>
 <radialGradient id="SVGID_1_" cx="925" cy="925" r="925" gradientUnits="userSpaceOnUse">
-	<stop  offset="0" style="stop-color:#DA0C5A"/>
-	<stop  offset="9.803305e-02" style="stop-color:#DA1458;stop-opacity:0.902"/>
-	<stop  offset="0.253" style="stop-color:#DA2B53;stop-opacity:0.747"/>
-	<stop  offset="0.4454" style="stop-color:#D9504B;stop-opacity:0.5546"/>
-	<stop  offset="0.6679" style="stop-color:#D88440;stop-opacity:0.3321"/>
-	<stop  offset="0.9127" style="stop-color:#D7C531;stop-opacity:8.733314e-02"/>
+	<stop  offset="0" style="stop-color:#DE3A1A"/>
+	<stop  offset="0.117" style="stop-color:#DE421B;stop-opacity:0.883"/>
+	<stop  offset="0.3019" style="stop-color:#DD591D;stop-opacity:0.6981"/>
+	<stop  offset="0.5316" style="stop-color:#DB7E21;stop-opacity:0.4684"/>
+	<stop  offset="0.7945" style="stop-color:#D9B127;stop-opacity:0.2055"/>
 	<stop  offset="1" style="stop-color:#D7DE2C;stop-opacity:0"/>
 </radialGradient>
 <circle class="st0" cx="925" cy="925" r="925"/>

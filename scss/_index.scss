@@ -1,10 +1,9 @@
 #home-page{
   section{
     width: 100%;
-    height: 100vh;
   }
 
-  section#bg, section#content{
+  section#bg{
     position: fixed;
     top: 0;
   }
@@ -19,6 +18,8 @@
 }
 
 #bg{
+  height: 100vh;
+
   &.bg1{
     background-color: $sl-orange;
   }
@@ -26,12 +27,9 @@
     background-color: #d7de2c;
   }
   &.bg3{
-    background-color: #f45a4a;
-  }
-  &.bg4{
     background-color: #e8851a;
   }
-  &.bg5{
+  &.bg4{
     background-color: $sl-orange;
   }
 
@@ -58,10 +56,6 @@
     }
 
     &.bg-gradient4{
-      background-image: url('../images/bg-gradient-slide4.svg');
-    }
-
-    &.bg-gradient5{
       background-image: url('../images/bg-gradient-slide1.svg');
     }
 
@@ -126,7 +120,8 @@
   @include prefixr(justify-content,center);
   @include prefixr(align-items,center);
   width: 64%;
-  max-width: $container-width-max;
+  height: 100vh;
+  max-width: $site-width-max;
   margin: auto;
   position: relative;
   background-color: transparent;
@@ -149,6 +144,10 @@
     }
   }
 
+  h3{
+    text-transform: uppercase;
+  }
+
   &.slide1{
     .bg-graphics{
       background-image: url('../images/slide1-leaves.svg');
@@ -166,19 +165,13 @@
 
   &.slide2{
     .bg-graphics{
-      background-image: url('../images/slide1-leaves.svg');
+      background-image: url('../images/slide2-leaves-fruit.svg');
     }
   }
 
   &.slide3{
     .bg-graphics{
-      background-image: url('../images/slide1-leaves.svg');
-    }
-  }
-
-  &.slide4{
-    .bg-graphics{
-      background-image: url('../images/slide1-leaves.svg');
+      background-image: url('../images/slide3-stars.svg');
     }
   }
 }
@@ -186,20 +179,35 @@
 .bg-graphics{
   position: absolute;
   z-index: 1;
-  width: 100%;
+  width: 90vw;
+  max-width: 1900px;
   height: 100%;
-  max-width: 1260px;
+  max-width: $site-width-max;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  @include breakpoint(m-l){
+    width: 100vw;
+    background-size: 150vw;
+  }
+
+  @include breakpoint(xs-680){
+    width: 100vw;
+    background-size: auto 75%;
+
+    .slide1 &{
+      background-size: 150vw;
+    }
+  }
 }
 
 .slide-image-container{
   @include prefixr(display,flex);
-  @include prefixr(justify-content,flex-end);
+  @include prefixr(justify-content,center);
   @include prefixr(align-items,center);
+  position: relative;
   width: 50%;
-  height: 100%;
   z-index: 2;
 
   @include breakpoint(xs-680){
@@ -208,20 +216,27 @@
     height: 54vh;
     margin-bottom: 20px;
   }
+
+  .slide1 &{
+    @include prefixr(justify-content,center);
+  }
 }
 
 .slide-image{
+  position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   max-width: 700px;
-  max-height: 70%;
+  max-height: 70vh;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
   background-size: contain;
+  z-index: 200;
 
   @include breakpoint(xs-680){
-    background-position: center;
+    background-position: bottom;
     max-height: 100vh;
+    height: 100%;
   }
 
   .slide1 &{
@@ -229,15 +244,13 @@
   }
 
   .slide2 &{
-    background-image: url('../images/bottle-fpo.png');
+    max-width: 835px;
+    background-image: url('../images/slide-organic-ingredients.png');
   }
 
   .slide3 &{
-    background-image: url('../images/bottle-fpo.png');
-  }
-
-  .slide4 &{
-    background-image: url('../images/bottle-fpo.png');
+    max-width: 584px;
+    background-image: url('../images/slide-mimi.png');
   }
 
   .core &{
@@ -251,15 +264,40 @@
   .unsweet &{
     background-image: url('../images/home-about-unsweet.png');
   }
+
+  &.glow{
+    position:absolute;
+    z-index: 100;
+    max-height: 76vh;
+    background-image: url('../images/slide-organic-ingredients-bg.png');
+
+    .slide2 &{
+      top: -76px;
+
+      @include breakpoint(xs-680){
+        top: auto;
+      }
+    }
+
+    .slide3 &{
+      max-width: 779px;
+
+      @include breakpoint(xs-680){
+        top: 40px;
+      }
+    }
+  }
 }
 
 .slide-copy{
   width: 50%;
-  max-width: 650px;
+  max-width: 720px;
   color: $sl-brown;
   z-index: 2;
+  padding-left: 2rem;
 
   @include breakpoint(xs-680){
+    padding-left: 0;
     text-align: center;
     width: 100%;
     max-width: 100%;
@@ -269,6 +307,44 @@
 
   .button{
     margin-top: 1rem;
+  }
+}
+
+
+//Slide 1 and about are exceptions to the layout
+.slide-main.slide1{
+  @include prefixr(flex-direction,column-reverse);
+  height: auto;
+  min-height: 100vh;
+
+  h1{
+    font-size: getRem(80px);
+    margin: 1rem 0;
+
+    @include breakpoint(l){
+      font-size: getRem(67px);
+    }
+
+    @include breakpoint(m){
+      font-size: getRem(56px);
+      margin: 0.75rem 0;
+    }
+
+    @include breakpoint(s){
+      font-size: getRem(44px);
+      margin: 0.5rem 0;
+    }
+  }
+
+  .slide-image-container{
+    width: 100%;
+  }
+
+  .slide-copy{
+    width: 100%;
+    padding-top: 21vh;
+    padding-left: 0;
+    text-align: center;
   }
 }
 
@@ -285,8 +361,35 @@
     color: $sl-brown;
   }
 
-  > div{
-    text-align: center;
+  ul{
+    font-family: "Vision Heavy";
+    font-size: getRem(40px);
+    letter-spacing: -2px;
+    margin-top: 1rem;
+
+    @include breakpoint(m){
+      font-size: getRem(30px);
+    }
+
+    @include breakpoint(xs-680){
+      font-size: getRem(25px);
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    li{
+      padding-top: 3px;
+      padding-bottom: 3px;
+
+      &:first-of-type{
+        padding-top: 0;
+      }
+
+      &:last-of-type{
+        padding-bottom: 0;
+      }
+    }
   }
 
   .button{
@@ -296,6 +399,8 @@
 }
 
 .about-products-main{
+  text-align: center;
+
   img{
     display: block;
     width: 77vw;
@@ -344,5 +449,133 @@
   @include breakpoint(xs-680){
     @include prefixr(flex-direction, column-reverse);
     padding-top: 3.5rem;
+  }
+}
+
+//Random slide elements
+.organic-stamp{
+  position: absolute;
+  z-index: 2;
+  right: 2rem;
+  bottom: 20vh;
+  width: 16.7vw;
+  height: 16.7vw;
+  min-width: getRem(40px);
+  min-height: getRem(40px);
+  max-width: getRem(214px);
+  max-height: getRem(214px);
+
+  background-image: url('../images/organic-stamp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(xs-680){
+    right: 1rem;
+    bottom: 4vh;
+  }
+}
+
+.bottle-cap{
+  position: absolute;
+  z-index: 2;
+  right: 15%;
+  bottom: 22vh;
+  width: 15.8vw;
+  height: 11.5vw;
+  min-width: getRem(124px);
+  min-height: getRem(90px);
+  max-width: getRem(304px);
+  max-height: getRem(221px);
+
+  background-image: url('../images/bottle-cap.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(xs-680){
+    right: -2rem;
+    bottom: 5vh;
+  }
+}
+
+.est-1998{
+  position: absolute;
+  z-index: 2;
+  right: 10%;
+  bottom: 45vh;
+  width: 5.6vw;
+  height: 5.6vw;
+  min-width: getRem(80px);
+  min-height: getRem(80px);
+  max-width: getRem(109px);
+  max-height: getRem(109px);
+
+  background-image: url('../images/est-1998.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(xs-680){
+    right: 1rem;
+    bottom: auto;
+    top: 40%;
+  }
+}
+
+.texas-stamp{
+  position: absolute;
+  z-index: 2;
+  right: 2rem;
+  top: 10vh;
+  width: 21vw;
+  height: 21vw;
+  min-width: getRem(120px);
+  min-height: getRem(120px);
+  max-width: getRem(264px);
+  max-height: getRem(264px);
+
+  background-image: url('../images/texas-stamp.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(xs-680){
+    right: 1rem;
+    top: 7vh;
+  }
+}
+
+.cactus{
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 18vh;
+  width: 14.8vw;
+  height: 29.5vw;
+  min-width: getRem(45px);
+  min-height: getRem(90px);
+  max-width: getRem(189px);
+  max-height: getRem(378px);
+
+  background-image: url('../images/cactus.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(xs-680){
+    right: -2rem;
+  }
+
+  &.reverse{
+    transform: scaleX(-1);
+    width: 11.7vw;
+    height:23.4vw;
+    min-width: getRem(35px);
+    min-height: getRem(70px);
+    max-width: getRem(150px);
+    max-height: getRem(300px);
+    right: auto !important;
+    left: -1rem;
+    bottom: 11vh;
+
+    @include breakpoint(xs-680){
+      bottom: 20vh;
+    }
   }
 }

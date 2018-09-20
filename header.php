@@ -11,6 +11,7 @@
         echo '</a>';
       }
     ?>
+    <div class="usda-badge"></div>
   </div>
   <nav>
     <ul class="hr-list">

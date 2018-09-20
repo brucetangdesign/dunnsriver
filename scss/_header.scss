@@ -18,7 +18,7 @@ header{
     @include breakpoint(xs-680-up){
       position: absolute;
     }
-    @include breakpoint(s-up){
+    @include breakpoint(m-up){
       position: fixed;
     }
   }
@@ -80,5 +80,34 @@ nav{
     &.selected{
       pointer-events: none;
     }
+  }
+}
+
+.usda-badge{
+  position: absolute;
+  z-index: 3000;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 22px;
+  top: 100%;
+  width: getRem(100px);
+  height: getRem(100px);
+
+  background-image: url('../images/usda-badge.svg');
+  background-position: center;
+  background-size: contain;
+
+  @include breakpoint(m-l){
+    width: getRem(65px);
+    height: getRem(65px);
+    margin-top: 13px;
+  }
+
+  @include breakpoint(s){
+    width: getRem(45px);
+    height: getRem(45px);
+    margin-top: 8px;
   }
 }

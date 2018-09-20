@@ -6,10 +6,12 @@ $( document ).ready(function() {
   var sec2 = false;
   var sec3 = false;
   var sec4 = false;
-  var sec5 = false;
   var breakpoints = [];
   var offset = breakpointInt;
   var $bg = $("#bg");
+  var $downArrow = $(".down-arrow");
+
+  checkScroll();
 
   //call the check when you scroll or resize
   $(window).on("resize scroll", function(){
@@ -24,6 +26,18 @@ $( document ).ready(function() {
         }
       }
     });
+
+    //if reached bottom hide down arrow
+    if($("body").isInView($(".last-content"))){
+      if(!$downArrow.hasClass("hidden")){
+        $downArrow.addClass("hidden");
+      }
+    }
+    else{
+      if($downArrow.hasClass("hidden")){
+        $downArrow.removeClass("hidden");
+      }
+    }
   }
 
   function showSection(secNum){

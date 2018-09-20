@@ -13,7 +13,7 @@ footer{
   max-width: $site-width-max;
 
   &.fixed{
-    @include breakpoint(s-up){
+    @include breakpoint(m-up){
       position: fixed;
       bottom: 0;
     }
@@ -51,5 +51,25 @@ footer{
     .footer-social-menu{
       margin-bottom: getRem(20px);
     }
+  }
+}
+
+.social-icon{
+  display: inline-block;
+  width: getRem(42px);
+  height: getRem(42px);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.fb{
+    background-image: url('../images/social-icon-fb.png');
+  }
+
+  &.insta{
+    background-image: url('../images/social-icon-insta.png');
+  }
+
+  &.tw{
+    background-image: url('../images/social-icon-tw.png');
   }
 }
