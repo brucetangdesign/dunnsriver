@@ -24,7 +24,7 @@ h1,h2,h3,h4,h5{
 h1{
   font-family: "Farao Black";
   font-size: getRem(50px);
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 2px;
   margin: 1rem 0;
 
@@ -102,7 +102,10 @@ p.subtitle, .subtitle{
 ul{
   margin: 0;
   padding: 0;
-  padding-inline-start: 20px;
+
+  li{
+    margin-left: 0.8em;
+  }
 }
 
 ul.hr-list{

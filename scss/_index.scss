@@ -161,6 +161,7 @@
 
   &.slide2{
     .bg-graphics{
+      margin-top: 6rem;
       background-image: url('../images/slide2-leaves-fruit.svg');
     }
   }
@@ -204,7 +205,7 @@
   @include prefixr(align-items,center);
   position: relative;
   width: 50%;
-  z-index: 2;
+  z-index: 200;
 
   @include breakpoint(xs-680){
     @include prefixr(justify-content,center);
@@ -357,8 +358,8 @@
     }
 
     li{
-      padding-top: 3px;
-      padding-bottom: 3px;
+      padding-top: getRem(5px);
+      padding-bottom: getRem(5px);
 
       &:first-of-type{
         padding-top: 0;

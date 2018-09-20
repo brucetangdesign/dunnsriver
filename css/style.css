@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-family: "Farao Black";
   font-size: 3.125rem;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 2px;
   margin: 1rem 0; }
   @media (max-width: 1280px) {
@@ -93,8 +93,9 @@ p.subtitle, .subtitle {
 
 ul {
   margin: 0;
-  padding: 0;
-  padding-inline-start: 20px; }
+  padding: 0; }
+  ul li {
+    margin-left: 0.8em; }
 
 ul.hr-list {
   list-style: none; }
@@ -476,6 +477,7 @@ footer {
     .slide-main.slide1 {
       margin-top: auto; } }
   .slide-main.slide2 .bg-graphics {
+    margin-top: 6rem;
     background-image: url("../images/slide2-leaves-fruit.svg"); }
   .slide-main.slide3 .bg-graphics {
     background-image: url("../images/slide3-stars.svg"); }
@@ -523,7 +525,7 @@ footer {
   align-items: center;
   position: relative;
   width: 50%;
-  z-index: 2; }
+  z-index: 200; }
   @media (max-width: 680px) {
     .slide-image-container {
       -webkit-justify-content: center;
@@ -645,8 +647,8 @@ footer {
         text-align: left;
         margin-bottom: 1rem; } }
     #about-products.slide-main ul li {
-      padding-top: 3px;
-      padding-bottom: 3px; }
+      padding-top: 0.3125rem;
+      padding-bottom: 0.3125rem; }
       #about-products.slide-main ul li:first-of-type {
         padding-top: 0; }
       #about-products.slide-main ul li:last-of-type {
