@@ -1,13 +1,9 @@
 $( document ).ready(function() {
-  var docHeight = $("body").height();
   var numBreakpoints = $(".slide-main").length;
-  var breakpointInt = (docHeight/numBreakpoints);
   var sec1 = true;
   var sec2 = false;
   var sec3 = false;
   var sec4 = false;
-  var breakpoints = [];
-  var offset = breakpointInt;
   var $bg = $("#bg");
   var $downArrow = $(".down-arrow");
 
