@@ -32,27 +32,31 @@ $page = "home-page";
     <!-- Main Slides -->
     <section class="slide-main slide1">
       <div class="bg-graphics rellax" data-rellax-speed="-4"></div>
-      <div class="slide-image-container" data-rellax-speed="3">
-        <div class="slide-image"></div>
-      </div>
-      <div class="slide-copy" data-rellax-speed="2">
-        <h3 class="uppercase">Sweet Leaf Is</h3>
-        <h1>Sweet...but<br>not too sweet.</h1>
-        <p class="subtitle">Sentence Here</p>
+      <div class="slide-content">
+        <div class="slide-image-container" data-rellax-speed="3">
+          <div class="slide-image"></div>
+        </div>
+        <div class="slide-copy" data-rellax-speed="2">
+          <h3 class="uppercase">Sweet Leaf Is</h3>
+          <h1>Sweet...but<br>not too sweet.</h1>
+          <p class="subtitle">Sentence Here</p>
+        </div>
       </div>
     </section>
 
     <section class="slide-main slide2">
       <div class="bg-graphics rellax" data-rellax-speed="-4"></div>
       <div class="organic-stamp rellax" data-rellax-speed="1"></div>
-      <div class="slide-image-container" data-rellax-speed="3">
-        <div class="slide-image"></div>
-        <div class="slide-image glow"></div>
-      </div>
-      <div class="slide-copy rellax" data-rellax-speed="2">
-        <h1>Copy about organics and ingredients to go here.</h1>
-        <p class="subtitle">Sentence Here</p>
-        <a class="button" href="#">Learn More</a>
+      <div class="slide-content">
+        <div class="slide-image-container" data-rellax-speed="3">
+          <div class="slide-image"></div>
+          <div class="slide-image glow"></div>
+        </div>
+        <div class="slide-copy rellax" data-rellax-speed="2">
+          <h1>Copy about organics and ingredients to go here.</h1>
+          <p class="subtitle">Sentence Here</p>
+          <a class="button" href="#">Learn More</a>
+        </div>
       </div>
     </section>
 
@@ -63,14 +67,16 @@ $page = "home-page";
       <div class="est-1998 rellax" data-rellax-speed="5.4"></div>
       <div class="cactus rellax" data-rellax-speed="2"></div>
       <div class="cactus reverse"></div>
-      <div class="slide-image-container" data-rellax-speed="1">
-        <div class="slide-image"></div>
-        <div class="slide-image glow"></div>
-      </div>
-      <div class="slide-copy rellax" data-rellax-speed="-2">
-        <h1>Copy about less sugar and great taste.</h1>
-        <p class="subtitle">Sentence Here</p>
-        <a class="button" href="#">Our Story</a>
+      <div class="slide-content">
+        <div class="slide-image-container" data-rellax-speed="1">
+          <div class="slide-image"></div>
+          <div class="slide-image glow"></div>
+        </div>
+        <div class="slide-copy rellax" data-rellax-speed="-2">
+          <h1>Copy about less sugar and great taste.</h1>
+          <p class="subtitle">Sentence Here</p>
+          <a class="button" href="#">Our Story</a>
+        </div>
       </div>
     </section>
 

@@ -425,49 +425,17 @@ footer {
       background-size: 200vw; } }
 
 .slide-main {
-  -webkit-display: flex;
-  -moz-display: flex;
-  -ms-display: flex;
-  -o-display: flex;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  width: 64%;
   height: 100vh;
-  max-width: 1920px;
   margin: auto;
   position: relative;
   background-color: transparent;
   z-index: 3;
   padding-top: 0;
   padding-bottom: 0; }
-  @media (max-width: 1280px) {
-    .slide-main {
-      width: 88%; } }
   @media (max-width: 680px) {
-    .slide-main {
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      -o-flex-direction: column;
-      flex-direction: column;
-      width: 100%;
-      padding: 2rem; }
-      .slide-main.slide1 {
-        padding-top: 0;
-        margin-top: -40px; } }
+    .slide-main.slide1 {
+      padding-top: 0;
+      margin-top: -40px; } }
   .slide-main.slide1 .bg-graphics {
     background-image: url("../images/slide1-leaves.svg"); }
   @media (min-width: 681px) {
@@ -502,6 +470,43 @@ footer {
       background-size: auto 75%; }
       .slide1 .bg-graphics {
         background-size: 150vw; } }
+
+.slide-content {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin: auto;
+  position: relative; }
+  @media (max-width: 680px) {
+    .slide-content {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -o-flex-direction: column;
+      flex-direction: column;
+      padding: 2rem; }
+      .slide-content.slide1 {
+        padding-top: 0;
+        margin-top: -40px; } }
 
 .slide-image-container {
   -webkit-display: flex;
@@ -548,7 +553,6 @@ footer {
   width: 100%;
   height: 100vh;
   max-width: 700px;
-  max-height: 70vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -564,7 +568,7 @@ footer {
     max-width: 835px;
     background-image: url("../images/slide-organic-ingredients.png"); }
   .slide3 .slide-image {
-    max-width: 584px;
+    max-width: 700px;
     background-image: url("../images/slide-mimi.png"); }
   .core .slide-image {
     background-image: url("../images/home-about-core.png"); }
@@ -606,15 +610,19 @@ footer {
     margin-top: 1rem; }
 
 .slide-main.slide1 {
-  -webkit-flex-direction: column-reverse;
-  -moz-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  -o-flex-direction: column-reverse;
-  flex-direction: column-reverse;
   height: auto;
   min-height: 100vh; }
+  .slide-main.slide1 .slide-content {
+    -webkit-flex-direction: column-reverse;
+    -moz-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    -o-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
   .slide-main.slide1 .slide-image-container {
     width: 100%; }
+  @media (max-width: 680px) {
+    .slide-main.slide1 .slide-image {
+      background-position: top; } }
   .slide-main.slide1 .slide-copy {
     width: 100%;
     padding-top: 21vh;
