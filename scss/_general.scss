@@ -7,8 +7,9 @@
 html,body{
   margin: 0;
   padding: 0;
-  color: #FFFFFF;
-  font-family: "Vision";
+  color: $sl-brown;
+  font-family: "Vision Heavy";
+  font-size: $base-font-size;
   background-color: $sl-orange;
   overflow-x: hidden;
 
@@ -23,13 +24,13 @@ h1,h2,h3,h4,h5{
 
 h1{
   font-family: "Farao Black";
-  font-size: getRem(50px);
+  font-size: getRem(48px);
   line-height: 1.15;
   letter-spacing: 2px;
   margin: 1rem 0;
 
   @include breakpoint(l){
-    font-size: getRem(42px);
+    font-size: getRem(41px);
   }
 
   @include breakpoint(m){
@@ -89,22 +90,30 @@ p.subtitle, .subtitle{
   font-family: "Vision Heavy";
   font-size: getRem(30px);
   margin: auto;
+  line-height: 1.3;
+  letter-spacing: -1px;
 
   @include breakpoint(l){
     font-size: getRem(26px);
   }
 
   @include breakpoint(s){
-    font-size: getRem(24px);
+    font-size: getRem(23px);
   }
 }
 
 ul{
   margin: 0;
   padding: 0;
+  list-style: none;
 
   li{
-    margin-left: 0.8em;
+
+    &:before{
+      content:'\2022';
+      position: relative;
+      margin-right: 8px;
+    }
   }
 }
 
@@ -112,8 +121,10 @@ ul.hr-list{
   list-style: none;
 
   li{
+    position: relative;
     display: inline;
     padding-left: 0;
+    margin-left: 0;
 
     &:before{
       display: none;
@@ -129,7 +140,7 @@ section{
 .button, a.button{
   display: inline-block;
   border-radius: 50px;
-  padding: 18px 38px;
+  padding: getRem(14px) getRem(38px);
   background-color: $sl-red;
   text-transform: uppercase;
   font-size: getRem(18px);
@@ -141,8 +152,8 @@ section{
   -webkit-transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.950);
 
   &:hover{
-    padding-left: 51px;
-    padding-right: 51px;
+    padding-left: getRem(51px);
+    padding-right: getRem(51px);
 
     transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.950);
     -webkit-transition: all 200ms cubic-bezier(0.680, -0.550, 0.265, 1.950);

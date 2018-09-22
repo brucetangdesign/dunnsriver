@@ -5,13 +5,9 @@
 <style type="text/css">
 	.st0{fill:url(#SVGID_1_);}
 </style>
-<radialGradient id="SVGID_1_" cx="925" cy="925" r="925" gradientUnits="userSpaceOnUse">
-	<stop  offset="0" style="stop-color:#DE3A1A"/>
-	<stop  offset="0.117" style="stop-color:#DE421B;stop-opacity:0.883"/>
-	<stop  offset="0.3019" style="stop-color:#DD591D;stop-opacity:0.6981"/>
-	<stop  offset="0.5316" style="stop-color:#DB7E21;stop-opacity:0.4684"/>
-	<stop  offset="0.7945" style="stop-color:#D9B127;stop-opacity:0.2055"/>
-	<stop  offset="1" style="stop-color:#D7DE2C;stop-opacity:0"/>
+<radialGradient id="SVGID_1_" cx="925" cy="925" r="925" gradientTransform="matrix(1 0 0 -1 0 1850)" gradientUnits="userSpaceOnUse">
+	<stop  offset="0" style="stop-color:#E68D1C"/>
+	<stop  offset="0.9998" style="stop-color:#D7DE2C;stop-opacity:0"/>
 </radialGradient>
 <circle class="st0" cx="925" cy="925" r="925"/>
 </svg>

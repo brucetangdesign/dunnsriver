@@ -11,6 +11,7 @@ footer{
   z-index: 3000;
   padding: 0px getRem(25px) getRem(25px);
   max-width: $site-width-max;
+  color: #FFFFFF;
 
   &.fixed{
     @include breakpoint(m-up){

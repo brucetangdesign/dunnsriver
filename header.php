@@ -16,6 +16,7 @@
   <nav>
     <ul class="hr-list">
       <li><a href="about.php" <?php if($page=="about-page"){ echo "class='selected'"; }?>>About</a></li>
+      <li><a href="mail:info@sweetleaf.com">Contact</a></li>
     </ul>
   </nav>
 </header>

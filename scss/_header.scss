@@ -8,6 +8,7 @@ header{
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 132px;
   width: 100%;
   text-align: center;
   z-index: 3000;
@@ -17,8 +18,9 @@ header{
   &.fixed{
     @include breakpoint(xs-680-up){
       position: absolute;
+      margin-bottom: 0;
     }
-    @include breakpoint(m-up){
+    @include breakpoint(m-s-up){
       position: fixed;
     }
   }
@@ -26,7 +28,7 @@ header{
 
 .logo-container{
   position: relative;
-  width: 187px;
+  width: 243px;
 
   img{
     position: relative;
@@ -62,6 +64,36 @@ nav{
   font-family: "Vision Heavy";
   font-size: getRem(18px);
 
+  ul.hr-list{
+    li{
+      margin-left: getRem(16px);
+      margin-right: getRem(16px);
+
+      &:first-of-type{
+        margin-left: 0;
+      }
+
+      &:last-of-type{
+        margin-right: 0;
+      }
+
+      @include breakpoint(xs){
+        &:after{ display: none; }
+        display: block;
+        margin: 3px 0;
+        text-align: right;
+
+        &:first-of-type{
+          margin-top: 0;
+        }
+
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
   a{
     color: #FFFFFF;
     text-decoration: none;
@@ -92,8 +124,8 @@ nav{
   margin-right: auto;
   margin-top: 22px;
   top: 100%;
-  width: getRem(100px);
-  height: getRem(100px);
+  width: getRem(80px);
+  height: getRem(80px);
 
   background-image: url('../images/usda-badge.svg');
   background-position: center;
@@ -106,8 +138,8 @@ nav{
   }
 
   @include breakpoint(s){
-    width: getRem(45px);
-    height: getRem(45px);
+    width: getRem(50px);
+    height: getRem(50px);
     margin-top: 8px;
   }
 }

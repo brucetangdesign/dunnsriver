@@ -14,11 +14,21 @@
   -webkit-transition-property: opacity, background-color;
   transition-duration: 0.6s;
   -webkit-transition-duration: 0.6s;
+  transition-timing-function: linear;
   padding: 0;
 }
 
+
 #bg{
   height: 100vh;
+
+  &.color{
+    opacity: 1;
+
+    &.hidden{
+      opacity: 0;
+    }
+  }
 
   &.bg1{
     background-color: $sl-orange;
@@ -45,18 +55,22 @@
 
     &.bg-gradient1{
       background-image: url('../images/bg-gradient-slide1.svg');
+      //background-color: $sl-orange;
     }
 
     &.bg-gradient2{
       background-image: url('../images/bg-gradient-slide2.svg');
+      //background-color: #d7de2c;
     }
 
     &.bg-gradient3{
       background-image: url('../images/bg-gradient-slide3.svg');
+      //background-color: #e8851a;
     }
 
     &.bg-gradient4{
       background-image: url('../images/bg-gradient-slide1.svg');
+      //background-color: $sl-orange;
     }
 
     &.hidden{
@@ -65,7 +79,7 @@
   }
 }
 
-.honeycomb, .austin-bg{
+.floral-bg, .austin-bg, .skyline, .lights{
   position: absolute;
   top: 0;
   left: 0;
@@ -75,10 +89,12 @@
   background-repeat: no-repeat;
 }
 
-.honeycomb{
-  width: 50%;
-  background-image: url('../images/honeycomb.svg');
+.floral-bg{
+  width: 34.2vw;
+  max-width: 438px;
+  background-image: url('../images/floral-bg.svg');
   background-size: cover;
+  background-position: right;
 
   &.reverse{
     left: auto;
@@ -90,21 +106,42 @@
   @include breakpoint(s){
     background-size: cover;
   }
+}
 
-  @include breakpoint(xs-680){
-    width: 100%;
-    background-position-x: 70%;
+.skyline{
+  background-image: url('../images/slide-3-bg-skyline.png');
+  background-size: contain;
+  background-position: bottom;
+
+  @include breakpoint(m){
+    background-size: 150vw;
   }
 
-  @include breakpoint(xs){
-    background-position-x: 50%;
+  @include breakpoint(xs-680){
+    background-size: 300vw;
+  }
+}
+
+.lights{
+  width: 37.9vw;
+  height: 21vw;
+  max-width: getRem(485px);
+  max-height: getRem(268px);
+  background-image: url('../images/slide-3-bg-light.png');
+  background-size: contain;
+
+  &.reverse{
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    left: auto;
+    right: 0;
   }
 }
 
 .austin-bg{
   background-image: url('../images/austin-bg.png');
   background-size: contain;
-  background-position: center 80px;
+  background-position: center;
 
   @include breakpoint(m){
     background-size: 150vw;
@@ -118,6 +155,7 @@
 .slide-main{
   height: 100vh;
   margin: auto;
+  margin-bottom: 6rem;
   position: relative;
   background-color: transparent;
   z-index: 3;
@@ -126,10 +164,13 @@
 
 
   @include breakpoint(xs-680){
-    &.slide1{
-      padding-top: 0;
-      margin-top: -40px;
-    }
+    margin-bottom: 3rem;
+    padding: 2rem;
+  }
+
+  @include breakpoint(xs){
+    min-height: 100vh;
+    height: auto;
   }
 
   &.slide1{
@@ -148,6 +189,10 @@
   }
 
   &.slide2{
+    @include breakpoint(xs-680){
+      margin-bottom: 7rem;
+    }
+
     .bg-graphics{
       margin-top: 6rem;
       background-image: url('../images/slide2-leaves-fruit.svg');
@@ -167,6 +212,9 @@
   width: 90vw;
   max-width: 1900px;
   height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
   max-width: $site-width-max;
   background-repeat: no-repeat;
   background-size: contain;
@@ -193,13 +241,12 @@
   @include prefixr(align-items,center);
   width: 100%;
   height: 100%;
-  max-width: $site-width-max;
+  max-width: $container-width-max;
   margin: auto;
   position: relative;
 
   @include breakpoint(xs-680){
     @include prefixr(flex-direction,column);
-    padding: 2rem;
 
     &.slide1{
       padding-top: 0;
@@ -246,7 +293,20 @@
   }
 
   .slide1 &{
-    background-image: url('../images/bottle-fpo.png');
+    margin-left: 15vw;
+    width: 44.5vw;
+    height: 61.1vw;
+    max-width: 624px;
+    max-height: 856px;
+    min-width: 358px;
+    min-height: 491px;
+    background-image: url('../images/slide1-bottle-mint.png');
+    background-position: top;
+
+    @include breakpoint(xs){
+      min-width: 280px;
+      min-height: 384px;
+    }
   }
 
   .slide2 &{
@@ -255,7 +315,7 @@
   }
 
   .slide3 &{
-    max-width: 700px;
+    max-width: 600px;
     background-image: url('../images/slide-mimi.png');
   }
 
@@ -278,7 +338,7 @@
     background-image: url('../images/slide-organic-ingredients-bg.png');
 
     .slide2 &{
-      top: -76px;
+      top: 27px;
 
       @include breakpoint(xs-680){
         top: auto;
@@ -301,10 +361,10 @@
   color: $sl-brown;
   z-index: 2;
   padding-left: 2rem;
+  text-align: center;
 
   @include breakpoint(xs-680){
     padding-left: 0;
-    text-align: center;
     width: 100%;
     max-width: 100%;
     transform: none !important;
@@ -312,7 +372,7 @@
   }
 
   .button{
-    margin-top: 1rem;
+    margin-top: 1.4rem;
   }
 }
 
@@ -328,6 +388,10 @@
 
   .slide-image-container{
     width: 100%;
+
+    @include breakpoint(xs-680){
+      height: auto;
+    }
   }
 
   .slide-image{
@@ -338,10 +402,23 @@
 
   .slide-copy{
     width: 100%;
-    padding-top: 21vh;
+    padding-top: 14vh;
     padding-left: 0;
     text-align: center;
     margin-bottom: 2rem;
+
+    @include breakpoint(m){
+      max-width: 500px;
+    }
+  }
+
+  @include breakpoint(s){
+    min-height: 0;
+  }
+
+  @include breakpoint(xs-680){
+    padding-top: 0;
+    margin-top: -20px;
   }
 }
 
@@ -356,6 +433,14 @@
 
   h1{
     color: $sl-brown;
+    max-width: 1100px;
+  }
+
+  h1, p{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
   }
 
   ul{
@@ -370,17 +455,15 @@
 
     @include breakpoint(xs-680){
       font-size: getRem(25px);
-      display: inline-block;
-      text-align: left;
       margin-bottom: 1rem;
     }
 
     li{
-      padding-top: getRem(5px);
-      padding-bottom: getRem(5px);
-
       &:first-of-type{
         padding-top: 0;
+        &:before{
+          display: none;
+        }
       }
 
       &:last-of-type{
@@ -396,6 +479,7 @@
 }
 
 .about-products-main{
+  position: relative;
   text-align: center;
 
   img{
@@ -407,7 +491,7 @@
 }
 
 .about-products-subs{
-  padding: 0 2rem;
+  padding: 0;
 
   .slide-image-container{
     height: auto;
@@ -415,11 +499,11 @@
 
   .slide-image{
     height: 38vw;
-    max-height: 590px;
-    min-height: 186px;
+    max-width: 100vw;
 
     @include breakpoint(xs-680){
       background-position: top center;
+      height: 80vw;
     }
   }
 }
@@ -447,9 +531,116 @@
     @include prefixr(flex-direction, column-reverse);
     padding-top: 3.5rem;
   }
+
+  .slide-copy{
+    @include breakpoint(s){
+      transform: none !important;
+      -webkit-transform: none !important;
+    }
+  }
 }
 
 //Random slide elements
+.bottle{
+  position: absolute;
+  z-index: 2;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &.original{
+    background-image: url('../images/slide1-bottle-original.png');
+    top: 29%;
+    left: 23%;
+    width: 25.7vw;
+    height: 29.2vw;
+    min-width: getRem(268px);
+    min-height: getRem(303px);
+    max-width: getRem(495px);
+    max-height: getRem(561px);
+
+    @include breakpoint(m-s){
+      left: 17%;
+    }
+
+    @include breakpoint(s){
+      top: 46%;
+      left: 12%;
+    }
+
+    @include breakpoint(xs-680){
+      min-width: 165px;
+      min-height: 186px;
+      top: 48%;
+      left: 7%;
+    }
+
+    @include breakpoint(xs){
+      left: 3%;
+    }
+  }
+
+  &.peach{
+    background-image: url('../images/slide1-bottle-peach.png');
+    top: 14%;
+    right: 8%;
+    width: 14.8vw;
+    height: 19.6vw;
+    min-width: getRem(185px);
+    min-height: getRem(245px);
+    max-width: getRem(285px);
+    max-height: getRem(376px);
+
+    @include breakpoint(l){
+      top: 21%;
+    }
+
+    @include breakpoint(m-s){
+      top: 34%;
+    }
+
+    @include breakpoint(s){
+      top: 41%;
+      right: 3%;
+      transform: none !important;
+      -webkit-transform: none !important;
+      min-width: 133px;
+      min-height: 176px;
+    }
+
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
+
+  &.honey{
+    background-image: url('../images/slide1-bottle-honey.png');
+    top: 33%;
+    left: 3%;
+    width: 21.1vw;
+    height: 18vw;
+    min-width: getRem(219px);
+    min-height: getRem(187px);
+    max-width: getRem(406px);
+    max-height: getRem(346px);
+
+    @include breakpoint(s){
+      top: 35%;
+      left: -4%;
+    }
+
+    @include breakpoint(xs-680){
+      top: 39%;
+      left: -6%;
+      min-width: 135px;
+      min-height: 115px;
+    }
+
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
+}
+
 .organic-stamp{
   position: absolute;
   z-index: 2;
@@ -459,8 +650,8 @@
   height: 16.7vw;
   min-width: getRem(40px);
   min-height: getRem(40px);
-  max-width: getRem(214px);
-  max-height: getRem(214px);
+  max-width: 214px;
+  max-height: 214px;
 
   background-image: url('../images/organic-stamp.png');
   background-size: contain;
@@ -472,11 +663,114 @@
   }
 }
 
+.mint-fruit{
+  position: absolute;
+  background-image: url('../images/slide1-mint-fruit.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  right: 0;
+  top: 33%;
+  margin: auto;
+  width: 79vw;
+  height: 25.4vw;
+  //max-width: getRem(1526px);
+  //max-height: getRem(489px);
+
+  @include breakpoint(xs-680){
+    display: none;
+  }
+}
+
+.bg-lemon{
+  position: absolute;
+  z-index: 2;
+  background-image: url('../images/slide1-bg-lemon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 2%;
+  bottom: 40%;
+  margin: auto;
+  width: 8.1vw;
+  height: 6.3vw;
+  max-width: getRem(156px);
+  max-height: getRem(121px);
+
+  @include breakpoint(xs-680){
+    display: none;
+  }
+}
+
+.bg-orange{
+  position: absolute;
+  z-index: 2;
+  background-image: url('../images/slide1-bg-orange.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 5%;
+  bottom: 34%;
+  margin: auto;
+  width: 6.9vw;
+  height: 6.9vw;
+  max-width: getRem(133px);
+  max-height: getRem(133px);
+
+  @include breakpoint(xs-680){
+    display: none;
+  }
+}
+
+.bg-text{
+  position: absolute;
+  z-index: 2;
+  right: 18%;
+  bottom: 15vh;
+  width: 37.8vw;
+  height: 28.2vw;
+  min-width: getRem(200px);
+  min-height: getRem(44px);
+  max-width: getRem(484px);
+  max-height: getRem(106px);
+
+  background-image: url('../images/slide-2-bg-text.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(xs-680){
+    bottom: -20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+.i-love-you{
+  position: absolute;
+  z-index: 2;
+  left: 41%;
+  top: 9%;
+  width: 24.8vw;
+  height: 24.8vw;
+  min-width: getRem(150px);
+  min-height: getRem(150px);
+  max-width: 317px;
+  max-height: 317px;
+
+  background-image: url('../images/i-love-you.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include breakpoint(xs-680){
+    top: 15%;
+    left: 0;
+  }
+}
+
 .bottle-cap{
   position: absolute;
   z-index: 2;
   right: 15%;
-  bottom: 22vh;
+  bottom: 8vh;
   width: 15.8vw;
   height: 11.5vw;
   min-width: getRem(124px);
@@ -497,12 +791,12 @@
 .est-1998{
   position: absolute;
   z-index: 2;
-  right: 10%;
-  bottom: 45vh;
+  right: 8%;
+  bottom: 32vh;
   width: 5.6vw;
   height: 5.6vw;
-  min-width: getRem(80px);
-  min-height: getRem(80px);
+  min-width: getRem(60px);
+  min-height: getRem(60px);
   max-width: getRem(109px);
   max-height: getRem(109px);
 
@@ -513,29 +807,29 @@
   @include breakpoint(xs-680){
     right: 1rem;
     bottom: auto;
-    top: 40%;
+    top: 50%;
   }
 }
 
-.texas-stamp{
+.austin-stamp{
   position: absolute;
   z-index: 2;
   right: 2rem;
-  top: 10vh;
-  width: 21vw;
-  height: 21vw;
-  min-width: getRem(120px);
-  min-height: getRem(120px);
-  max-width: getRem(264px);
-  max-height: getRem(264px);
+  top: 16vh;
+  width: 13.6vw;
+  height: 13.6vw;
+  min-width: getRem(100px);
+  min-height: getRem(100px);
+  max-width: 174px;
+  max-height: 174px;
 
-  background-image: url('../images/texas-stamp.png');
+  background-image: url('../images/austin-stamp.png');
   background-size: contain;
   background-repeat: no-repeat;
 
   @include breakpoint(xs-680){
     right: 1rem;
-    top: 7vh;
+    top: 25vh;
   }
 }
 
@@ -575,4 +869,9 @@
       bottom: 20vh;
     }
   }
+}
+
+.center{
+  position: absolute;
+  top: 50%;
 }

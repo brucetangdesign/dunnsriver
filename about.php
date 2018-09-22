@@ -13,32 +13,33 @@ $page = "about-page";
 
   <body id="<?php echo $page; ?>">
     <?php include 'header.php'; ?>
+    <div class="cactus"></div>
     <section id="about-mimi">
-      <h3>Sweet Leaf</h3>
-      <h1>Meet Mimi</h1>
-      <div class="about-images">
+      <h1>About Us</h1>
+      <div class="about-content">
+        <div class="about-mimi-saying"></div>
         <div class="image-container">
-          <img src="images/about-mimi-new.png">
+          <div class="about-skull-stars"></div>
+          <div class="austin-stamp"></div>
+          <div class="slide-image glow"></div>
+          <img src="images/slide-mimi.png">
         </div>
-        <img class="red-arrow" src="images/red-arrow.svg">
-        <div class="image-container">
-          <img src="images/about-mimi-new.png">
+        <div class="copy">
+          <p class="subtitle">Born in Austin over 20 years ago, today you’ll still find the same love in every bottle of our 100% organic sweet leaf tea. If y’all knowAustin you know we take a heck of a lot of pride in the uniqueness of our home. We are committed to bringing you flavors as authentic as the
+people, food, music, art and even dem damn bats, that keep back home as original as it comes. Keep it weird, keep it organic and keep it simple.</p>
         </div>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum nunc vel posuere dictum. Aliquam id euismod neque. In luctus eleifend lectus, ac luctus turpis ullamcorper sed. Pellentesque id dolor molestie, molestie turpis ac, consequat diam. Maecenas posuere condimentum tellus, ac eleifend nisi gravida a. Fusce euismod justo ut magna vulputate sodales. Etiam ac tristique tortor. Nullam ut placerat quam. Phasellus congue nulla vel nisi faucibus consequat. Sed sagittis lacus ante, sed rhoncus erat vulputate in. Integer aliquet scelerisque leo, vel tincidunt nisl rhoncus sed. Nam malesuada et ligula vel faucibus.</p>
     </section>
-    <section id="packaging">
-      <h3>New Packaging</h3>
-      <div class="about-images">
-        <div class="image-container">
-          <img src="images/about-package-old.png">
+    <section id="our-products">
+      <h1>Our Products</h1>
+      <div class="about-content">
+        <div class="copy">
+          <p class="subtitle">We ain’t all cut from the same cloth, but we all wear clothes. We know that each of you has your own sweet. Some like it sweet, some not so much and others even less so, don’t fret we got something for you for whatever you like.</p>
         </div>
-        <img class="red-arrow" src="images/red-arrow.svg">
         <div class="image-container">
-          <img src="images/about-package-new.png">
+          <img src="images/about-products.jpg">
         </div>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum nunc vel posuere dictum. Aliquam id euismod neque. In luctus eleifend lectus, ac luctus turpis ullamcorper sed. Pellentesque id dolor molestie, molestie turpis ac, consequat diam. Maecenas posuere condimentum tellus, ac eleifend nisi gravida a. Fusce euismod justo ut magna vulputate sodales. Etiam ac tristique tortor. Nullam ut placerat quam. Phasellus congue nulla vel nisi faucibus consequat. Sed sagittis lacus ante, sed rhoncus erat vulputate in. Integer aliquet scelerisque leo, vel tincidunt nisl rhoncus sed. Nam malesuada et ligula vel faucibus.</p>
     </section>
     <?php include 'footer.php'; ?>
   </body>

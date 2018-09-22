@@ -15,37 +15,48 @@ $( document ).ready(function() {
   });
 
   function checkScroll(){
-    $(".slide-main").each(function(index){
-      if($("body").isInView($(this),$(window).height()-$(window).height()/2)){
-        if(!eval("sec" + (index + 1))){
-          showSection(index + 1);
-        }
+    if($("body").isInView($(".center"))){
+      if(!sec1){
+        showSection(1);
       }
-    });
+    }
 
-    //if reached bottom hide down arrow
-    if($("body").isInView($(".last-content"))){
-      if(!$downArrow.hasClass("hidden")){
-        $downArrow.addClass("hidden");
+    if($("body").isInView($(".slide2 .center"))){
+      if(!sec2){
+        showSection(2);
       }
     }
-    else{
-      if($downArrow.hasClass("hidden")){
-        $downArrow.removeClass("hidden");
+
+    if($("body").isInView($(".slide3 .center"))){
+      if(!sec3){
+        showSection(3);
       }
     }
+
+    if($("body").isInView($(".slide4 .center"))){
+      if(!sec4){
+        showSection(4);
+      }
+    }
+    
   }
 
   function showSection(secNum){
-    $bg.removeClass();
-    $bg.addClass("bg"+secNum);
+    if(!$bg.hasClass("bg"+secNum)){
+      $bg.removeClass();
+      $bg.addClass("bg"+secNum);
+    }
 
     $bg.children().each(function(index){
       if(!$(this).hasClass("bg-gradient"+secNum)){
-        $(this).addClass("hidden");
+        if(!$(this).hasClass("hidden")){
+          $(this).addClass("hidden");
+        }
       }
       else{
-        $(this).removeClass("hidden");
+        if($(this).hasClass("hidden")){
+          $(this).removeClass("hidden");
+        }
       }
     });
 
