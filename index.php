@@ -102,6 +102,9 @@ $page = "home-page";
         <img src="images/home-products-main.png">
         <div class="center"></div>
       </div>
+      <div class="product-chart">
+        <img src="images/home-about-chart.png">
+      </div>
       <div class="about-products-subs">
         <div class="about-product-content">
           <div class="slide-image-container core">

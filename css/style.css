@@ -825,6 +825,13 @@ footer {
       transform: none !important;
       -webkit-transform: none !important; } }
 
+.product-chart {
+  text-align: center;
+  margin-top: 4rem; }
+  .product-chart img {
+    max-width: 800px;
+    width: 100%; }
+
 .bottle {
   position: absolute;
   z-index: 2;
