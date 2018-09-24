@@ -67,7 +67,7 @@ $page = "home-page";
         <div class="slide-copy rellax" data-rellax-speed="2">
           <h1>100% Organic Sweet Leaf Tea! We wouldn’t have it any other way.</h1>
           <p class="subtitle">We’ve been at it for over 20 years when we made each batch with a lot of heart, filling each bottle by hand. Times have sure changed but ‘round here integrity hasn’t.</p>
-          <a class="button" href="#">Learn More</a>
+          <a class="button" href="about.php#our-products">Learn More</a>
         </div>
       </div>
     </section>
@@ -89,7 +89,7 @@ $page = "home-page";
         <div class="slide-copy rellax" data-rellax-speed="-2">
           <h1>Special places brew special flavor.</h1>
           <p class="subtitle">Born in Austin in Mimi’s kitchen, our original recipeof 100% organic sweet tea still has that flavor onlyfound ‘round here. </p>
-          <a class="button" href="#">Our Story</a>
+          <a class="button" href="about.php">Our Story</a>
         </div>
       </div>
     </section>
@@ -99,11 +99,52 @@ $page = "home-page";
         <h1>Our famous 100% organic tea recipes for y’all and all y’alls taste.</h1>
         <p class="subtitle">Made from simple ingredients and a whole lotta love. Original Sweet Teas, Semisweet Teas and Unsweet Teas in different flavors to enjoy.</p>
         <a class="button" href="about.php">Tell Me More</a>
-        <img src="images/home-products-main.png">
+        <div class="about-products-main-image"></div>
         <div class="center"></div>
       </div>
       <div class="product-chart">
-        <img src="images/home-about-chart.png">
+        <!--<img src="images/home-about-chart.png">-->
+        <span class="chart-title">Pick Your Sweet!</span>
+        <div class="honeycomb"></div>
+        <table class="nutritional-chart">
+          <thead>
+            <tr>
+              <th>Flavor</th>
+              <th>Calories<span class="small-text">per serving</span></th>
+              <th>Sugar<span class="small-text">in grams(g)</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sweet</td>
+              <td>80 – 55</td>
+              <td>14<sub>g</sub> – 19<sub>g</sub></td>
+            </tr>
+            <tr>
+              <td>Semisweet</td>
+              <td>45</td>
+              <td>10<sub>g</sub></td>
+            </tr>
+            <tr>
+              <td>Unsweet</td>
+              <td>5 – 2</td>
+              <td>0<sub>g</sub></td>
+            </tr>
+            <tr>
+              <td class="subhead" colspan="3">Compare Our Sweet</td>
+            </tr>
+            <tr>
+              <td>Leading National Ice Tea Brand</td>
+              <td>160</td>
+              <td>39<sub>g</sub></td>
+            </tr>
+            <tr>
+              <td>Leading National Soft Drink Brand</td>
+              <td>140 – 180</td>
+              <td>39<sub>g</sub> – 44<sub>g</sub></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="about-products-subs">
         <div class="about-product-content">
@@ -126,7 +167,7 @@ $page = "home-page";
           <div class="slide-copy rellax">
             <h1>Semisweet Teas</h1>
             <ul>
-              <li>Same taste, less sugar</li>
+              <li>Great taste, less sugar</li>
               <li>Under 10 grams of Sugar</li>
               <li>50 calories per serving</li>
             </ul>

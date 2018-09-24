@@ -163,6 +163,7 @@
 }
 
 #our-products{
+
   .about-content .image-container img{
     max-width: 700px;
   }
@@ -177,6 +178,10 @@
 
     @include breakpoint(xs-680){
       @include prefixr(flex-direction, column-reverse);
+
+      .image-container{
+        width: 100%;
+      }
     }
   }
 }

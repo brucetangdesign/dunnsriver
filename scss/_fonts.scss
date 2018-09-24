@@ -14,6 +14,12 @@
 }
 
 @font-face {
+  font-family: 'Vision Bold';
+  src:  url('../webfonts/vision-bold.woff2') format('woff2'),
+        url('../webfonts/vision-bold.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Vision Heavy';
   src:  url('../webfonts/vision-heavy.woff2') format('woff2'),
         url('../webfonts/vision-heavy.woff') format('woff'),

@@ -312,6 +312,16 @@
   .slide2 &{
     max-width: 835px;
     background-image: url('../images/slide-organic-ingredients.png');
+
+    @include breakpoint(s){
+      @include background-2x( '../images/slide-organic-ingredients-mobile', 'png', contain, auto, center, no-repeat );
+      background-size: contain !important;
+    }
+
+    @include breakpoint(xs-680){
+      background-position: bottom;
+      background-size: contain !important;
+    }
   }
 
   .slide3 &{
@@ -320,15 +330,43 @@
   }
 
   .core &{
-    background-image: url('../images/home-about-core.png');
+    @include background-2x( '../images/home-about-core', 'png', contain, auto, center, no-repeat );
+    background-size: contain !important;
+
+    width: 100%;
+    height: 38.6vw;
+    max-width: 909px;
+    max-height: 737px;
+
+    @include breakpoint(s){
+      height: 72vw;
+    }
   }
 
   .semisweet &{
     background-image: url('../images/home-about-semisweet.png');
+
+    width: 100%;
+    height: 39vw;
+    max-width: 692px;
+    max-height: 782px;
+
+    @include breakpoint(s){
+      height: 100vw;
+    }
   }
 
   .unsweet &{
     background-image: url('../images/home-about-unsweet.png');
+
+    width: 100%;
+    height: 38.6vw;
+    max-width: 663px;
+    max-height: 737px;
+
+    @include breakpoint(s){
+      height: 96vw;
+    }
   }
 
   &.glow{
@@ -425,11 +463,12 @@
 #about-products.slide-main{
   display: block;
   width: 100%;
-  max-width: $container-width-max;
+  max-width: $site-width-max;
   margin-left: auto;
   margin-bottom: 3rem;
   height: auto;
   padding-top: 3.5rem;
+  text-align: center;
 
   h1{
     color: $sl-brown;
@@ -481,30 +520,58 @@
 .about-products-main{
   position: relative;
   text-align: center;
+  max-width: $container-width-max;
+  margin-left: auto;
+  margin-right: auto;
 
   img{
     display: block;
-    width: 77vw;
-    max-width: 1477px;
+    width: 100vw;
+    max-width: 1329px;
     margin: 3rem auto 0;
+  }
+}
+
+.about-products-main-image{
+  width: 92.3vw;
+  height: 30.34vw;
+  max-width: 1329px;
+  max-height: 437px;
+  margin: 3rem auto 0;
+
+  @include background-2x( '../images/home-products-main', 'png', contain, auto, center center, no-repeat );
+  background-size: contain !important;
+
+  @include breakpoint(xs-680){
+    width: 100%;
+    height: 53.82vw;
+    max-width: 680px;
+    max-height: 366px;
+    margin-top: 0.5rem;
+    @include background-2x( '../images/home-products-main-mobile', 'png', contain, auto, center center, no-repeat );
   }
 }
 
 .about-products-subs{
   padding: 0;
+  margin-top: 5rem;
 
   .slide-image-container{
     height: auto;
+
+    @include breakpoint(s){
+      width: 100%;
+    }
   }
 
   .slide-image{
-    height: 38vw;
-    max-width: 100vw;
-
-    @include breakpoint(xs-680){
+    @include breakpoint(s){
       background-position: top center;
-      height: 80vw;
     }
+  }
+
+  @include breakpoint(s){
+    margin-top: 2rem;
   }
 }
 
@@ -514,7 +581,7 @@
   @include prefixr(align-items, center);
 
   &:nth-child(even){
-    @include breakpoint(xs-680-up){
+    @include breakpoint(s-up){
       @include prefixr(flex-direction, row-reverse);
 
       .slide-image-container{
@@ -527,7 +594,7 @@
     }
   }
 
-  @include breakpoint(xs-680){
+  @include breakpoint(s){
     @include prefixr(flex-direction, column-reverse);
     padding-top: 3.5rem;
   }
@@ -536,16 +603,221 @@
     @include breakpoint(s){
       transform: none !important;
       -webkit-transform: none !important;
+
+      width: 100%;
     }
   }
 }
 
 .product-chart{
+  display: inline-block;
+  position: relative;
   text-align: center;
   margin-top: 4rem;
   img{
     max-width: 800px;
     width: 100%;
+  }
+
+  &:before, &:after, .honeycomb{
+    content: '';
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  &:before{
+    background-image: url('../images/chart-leaves-left.png');
+    width: 12.95vw;
+    height: 12.6vw;
+    max-width: getRem(154px);
+    max-height: getRem(150px);
+    left: -116px;
+    bottom: -43px;
+    z-index: 3;
+
+    @include breakpoint(m-l){
+      left: -9.75vw;
+      bottom: -3.6vw;
+    }
+  }
+
+  &:after{
+    background-image: url('../images/chart-leaves-right.png');
+    width: 20.5vw;
+    height: 12.27vw;
+    max-width: getRem(244px);
+    max-height: getRem(146px);
+    right: -121px;
+    bottom: -58px;
+    z-index: 3;
+
+    @include breakpoint(m-l){
+      right: -10.17vw;
+      bottom: -4.878vw;
+    }
+  }
+
+  .honeycomb{
+    background-image: url('../images/honeycomb.png');
+    width: 15.9vw;
+    height: 13.54vw;
+    max-width: getRem(189px);
+    max-height: getRem(161px);
+    left: -113px;
+    bottom: 0;
+    z-index: 1;
+
+    @include breakpoint(m-l){
+      left: -9.75vw;
+    }
+  }
+
+  @include breakpoint (xs-680){
+    margin-top: 2rem;
+    width: 100%;
+
+    &:before, &:after, .honeycomb{
+      display: none;
+    }
+  }
+}
+
+.chart-title{
+  font-size: getRem(40px);
+
+  &:before, &:after{
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 27px;
+    height: 26px;
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &:before{
+    margin-right: 10px;
+  }
+
+  &:after{
+    margin-left: 10px;
+  }
+
+  @include breakpoint (xs-680){
+    font-size: getRem(30px);
+
+    &:before, &:after{
+      width: 22px;
+      height: 20px;
+    }
+  }
+}
+
+table.nutritional-chart{
+  position: relative;
+  z-index: 2;
+  width: 100vw;
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+  border-collapse: separate;
+  border: solid transparent 1px;
+  border-radius: 20px;
+  border-spacing: 0;
+  overflow: hidden;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 0.6rem;
+
+  th, td{
+    vertical-align: middle;
+    padding-top: 27px;
+    padding-bottom: 25px;
+
+    &:nth-child(1){
+      text-align: left;
+      padding-left: getRem(38px);
+      padding-right: 18px;
+    }
+
+    &:last-of-type{
+      padding-right: getRem(38px);
+    }
+  }
+
+  thead{
+    font-size: 1.875em;
+
+    tr{
+      background-color: $sl-red;
+      color: #FFFFFF;
+    }
+
+    .small-text{
+      display: block;
+      font-size: 0.6em;
+    }
+  }
+
+  tbody{
+    font-family: "Vision Bold";
+    font-size: 1.6875em;
+
+    tr{
+      background-color: #fdf4dc;
+
+      &:nth-child(even){
+        background-color: #fcedc5;
+      }
+    }
+  }
+
+  td.subhead{
+    font-family: "Vision Heavy";
+    font-size: 1.1111em;
+    text-align: center;
+
+    @include breakpoint (xs-680){
+      font-size: 21px;
+    }
+  }
+
+  @include breakpoint (m-l){
+    width: 75vw;
+  }
+
+  @include breakpoint (m-s){
+    th, td{
+      &:nth-child(1){
+        max-width: 176px;
+      }
+    }
+  }
+
+  @include breakpoint (xs-680){
+    font-size: 0.7rem;
+    width: 100%;
+
+    thead .small-text{
+      font-size: 0.7em;
+    }
+
+    th, td{
+      &:nth-child(1){
+        max-width: 34.666vw;
+        padding-left: getRem(23px);
+        padding-right: 0;
+      }
+
+      &:last-of-type{
+        padding-right: getRem(23px);
+      }
+    }
   }
 }
 

@@ -26,7 +26,6 @@ h1{
   font-family: "Farao Black";
   font-size: getRem(48px);
   line-height: 1.15;
-  letter-spacing: 2px;
   margin: 1rem 0;
 
   @include breakpoint(l){
