@@ -97,7 +97,8 @@ p.subtitle, .subtitle {
       font-size: 1.625rem; } }
   @media (max-width: 768px) {
     p.subtitle, .subtitle {
-      font-size: 1.4375rem; } }
+      font-size: 1.4375rem;
+      letter-spacing: -1px; } }
 
 ul {
   margin: 0;

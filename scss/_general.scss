@@ -98,6 +98,7 @@ p.subtitle, .subtitle{
 
   @include breakpoint(s){
     font-size: getRem(23px);
+    letter-spacing: -1px;
   }
 }
 

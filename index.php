@@ -11,6 +11,8 @@ $page = "home-page";
 <html lang="en">
   <head>
     <?php include 'head.php'; ?>
+    <script src="js/isInView.js"></script>
+    <script src="js/sweetleaf.js"></script>
   </head>
 
   <body id="<?php echo $page; ?>">
@@ -65,8 +67,8 @@ $page = "home-page";
           <div class="slide-image glow"></div>
         </div>
         <div class="slide-copy rellax" data-rellax-speed="2">
-          <h1>100% Organic Sweet Leaf Tea! We wouldn’t have it any other way.</h1>
-          <p class="subtitle">We’ve been at it for over 20 years when we made each batch with a lot of heart, filling each bottle by hand. Times have sure changed but ‘round here integrity hasn’t.</p>
+          <h1>100% Organic Sweet Leaf Tea! We wouldn't make it any other way!</h1>
+          <p class="subtitle">We've been doin' this for over 20 years! Back in the old days, we made each batch with a heck of a lot of heart and filled every bottle by hand! Times might've changed, but you'll still find that same love in every bottle of Organic Sweet Leaf Tea! We use only ingredients you can pronounce like Organic Tea Leaves and Real Can Sugar! Call me stubborn or call me simple, We reckon it's not the way most folks are doin' it, but it sure as heck is the way we do it, and it's the way we're gonna keep doin' it, too!<br>LOVE, Mimi</p>
           <a class="button" href="about.php#our-products">Learn More</a>
         </div>
       </div>

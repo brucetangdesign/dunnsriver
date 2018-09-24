@@ -15,6 +15,7 @@
   </div>
   <nav>
     <ul class="hr-list">
+      <li><a class="products-link" href="<?php if($page=="about-page"){ echo "index.php"; }?>#about-products">Products</a></li>
       <li><a href="about.php" <?php if($page=="about-page"){ echo "class='selected'"; }?>>About</a></li>
       <li><a href="mail:sweetleaftea@casupport.com">Contact</a></li>
     </ul>

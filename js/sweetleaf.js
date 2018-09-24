@@ -7,6 +7,15 @@ $( document ).ready(function() {
   var $bg = $("#bg");
   var $downArrow = $(".down-arrow");
 
+  if($("#home-page").length){
+    $("nav  li > a.products-link").click(function(e){
+      e.preventDefault();
+      if($("#about-products").length){
+        $("html, body").animate({ scrollTop: $("#about-products").position().top },1000);
+      }
+    });
+  }
+
   checkScroll();
 
   //call the check when you scroll or resize
@@ -38,7 +47,7 @@ $( document ).ready(function() {
         showSection(4);
       }
     }
-    
+
   }
 
   function showSection(secNum){
