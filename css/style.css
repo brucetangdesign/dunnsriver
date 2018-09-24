@@ -200,10 +200,12 @@ header {
   z-index: 3000;
   padding: 1.75rem 1.75rem 0px;
   max-width: 1920px; }
+  @media (max-width: 480px) {
+    header.fixed {
+      margin-bottom: 0; } }
   @media (min-width: 681px) {
     header.fixed {
-      position: absolute;
-      margin-bottom: 0; } }
+      position: absolute; } }
   @media (min-width: 961px) {
     header.fixed {
       position: fixed; } }

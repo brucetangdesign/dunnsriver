@@ -16,9 +16,12 @@ header{
   max-width: $site-width-max;
 
   &.fixed{
+    @include breakpoint(xs){
+      margin-bottom: 0;
+    }
+
     @include breakpoint(xs-680-up){
       position: absolute;
-      margin-bottom: 0;
     }
     @include breakpoint(m-s-up){
       position: fixed;

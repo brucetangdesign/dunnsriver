@@ -139,7 +139,7 @@ $page = "home-page";
           <div class="slide-copy rellax">
             <h1>Unsweet Teas</h1>
             <ul>
-              <li>Same taste, no sugar</li>
+              <li>Refreshing taste, no sugar</li>
               <li>ZERO SUGAR</li>
               <li>5 Calories per serving</li>
             </ul>

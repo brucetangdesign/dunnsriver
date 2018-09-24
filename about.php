@@ -34,7 +34,7 @@ people, food, music, art and even dem damn bats, that keep back home as original
       <h1>Our Products</h1>
       <div class="about-content">
         <div class="copy">
-          <p class="subtitle">We ain’t all cut from the same cloth, but we all wear clothes. We know that each of you has your own sweet. Some like it sweet, some not so much and others even less so, don’t fret we got something for you for whatever you like.</p>
+          <p class="subtitle">We ain’t all cut from the same cloth, but we all wear clothes...We know that each of you has your own sweet. Some like it sweet, some not so much and others even less so, don’t fret we got something for you for whatever you like.</p>
         </div>
         <div class="image-container">
           <img src="images/about-products.jpg">
