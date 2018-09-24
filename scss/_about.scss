@@ -62,6 +62,11 @@
     @include breakpoint(s){
       display: none;
     }
+
+    @include breakpoint(l){
+      bottom: auto;
+      top: 80%;
+    }
   }
 }
 
@@ -102,7 +107,7 @@
   .austin-stamp{
     right: auto;
     top: -10%;
-    left: -10%;
+    left: -1%;
 
     @include breakpoint(s){
       width: 8vw;

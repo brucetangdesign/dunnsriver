@@ -56,7 +56,7 @@ $page = "home-page";
 
     <section class="slide-main slide2">
       <div class="bg-graphics rellax" data-rellax-speed="-3"></div>
-      <div class="bg-text rellax" data-rellax-speed="1"></div>
+      <!--<div class="bg-text rellax" data-rellax-speed="1"></div>-->
       <div class="organic-stamp rellax" data-rellax-speed="5"></div>
       <div class="center"></div>
       <div class="slide-content">
@@ -88,7 +88,7 @@ $page = "home-page";
         </div>
         <div class="slide-copy rellax" data-rellax-speed="-2">
           <h1>Special places brew special flavor.</h1>
-          <p class="subtitle">Born in Austin in Mimi’s kitchen, our original recipeof 100% organic sweet tea still has that flavor onlyfound ‘round here. </p>
+          <p class="subtitle">Born in Austin in Mimi’s kitchen, our original recipe of 100% organic sweet tea still has that flavor only found ‘round here.</p>
           <a class="button" href="about.php">Our Story</a>
         </div>
       </div>
@@ -116,17 +116,17 @@ $page = "home-page";
           </thead>
           <tbody>
             <tr>
-              <td>Sweet</td>
+              <td><span class="chart-flavor sweet">Sweet</span></td>
               <td>80 – 55</td>
               <td>14<sub>g</sub> – 19<sub>g</sub></td>
             </tr>
             <tr>
-              <td>Semisweet</td>
+              <td><span class="chart-flavor semisweet">Semisweet</span></td>
               <td>45</td>
               <td>10<sub>g</sub></td>
             </tr>
             <tr>
-              <td>Unsweet</td>
+              <td><span class="chart-flavor unsweet">Unsweet</span></td>
               <td>5 – 2</td>
               <td>0<sub>g</sub></td>
             </tr>

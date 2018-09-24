@@ -91,7 +91,7 @@ p.subtitle, .subtitle {
   font-size: 1.875rem;
   margin: auto;
   line-height: 1.3;
-  letter-spacing: -1px; }
+  letter-spacing: -2px; }
   @media (max-width: 1280px) {
     p.subtitle, .subtitle {
       font-size: 1.625rem; } }
@@ -1042,6 +1042,39 @@ table.nutritional-chart {
     @media (max-width: 680px) {
       table.nutritional-chart td.subhead {
         font-size: 21px; } }
+  table.nutritional-chart td span.chart-flavor {
+    position: relative; }
+    table.nutritional-chart td span.chart-flavor:after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: 144px;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%); }
+      @media (max-width: 680px) {
+        table.nutritional-chart td span.chart-flavor:after {
+          left: 100px; } }
+    table.nutritional-chart td span.chart-flavor.sweet:after {
+      background-image: url("../images/chart-cubes-sweet.png");
+      width: 5.8vw;
+      height: 5.3vw;
+      max-width: 56px;
+      max-height: 51px; }
+    table.nutritional-chart td span.chart-flavor.semisweet:after {
+      background-image: url("../images/chart-cubes-semisweet.png");
+      width: 5.3vw;
+      height: 4.58vw;
+      max-width: 51px;
+      max-height: 44px; }
+    table.nutritional-chart td span.chart-flavor.unsweet:after {
+      background-image: url("../images/chart-cubes-unsweet.png");
+      width: 3.54vw;
+      height: 4.166vw;
+      max-width: 34px;
+      max-height: 40px; }
   @media (max-width: 1188px) {
     table.nutritional-chart {
       width: 75vw; } }
@@ -1391,6 +1424,10 @@ table.nutritional-chart {
     @media (max-width: 768px) {
       #about-page .cactus {
         display: none; } }
+    @media (max-width: 1280px) {
+      #about-page .cactus {
+        bottom: auto;
+        top: 80%; } }
 
 .about-content {
   -webkit-display: flex;
@@ -1432,7 +1469,7 @@ table.nutritional-chart {
   .about-content .austin-stamp {
     right: auto;
     top: -10%;
-    left: -10%; }
+    left: -1%; }
     @media (max-width: 768px) {
       .about-content .austin-stamp {
         width: 8vw;

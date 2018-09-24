@@ -90,7 +90,7 @@ p.subtitle, .subtitle{
   font-size: getRem(30px);
   margin: auto;
   line-height: 1.3;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
 
   @include breakpoint(l){
     font-size: getRem(26px);
