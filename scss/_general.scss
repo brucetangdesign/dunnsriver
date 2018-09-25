@@ -170,33 +170,6 @@ section{
   }
 }
 
-.down-arrow{
-  position: fixed;
-  width: 41px;
-  height: 22px;
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom: 30px;
-  opacity: 1;
-  z-index: 3000;
-
-  background-image: url('../images/arrow-down.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  transition: all 200ms ease-out;
-  -webkit-transition: all 200ms ease-out;
-
-  &.hidden{
-    opacity: 0;
-    bottom: 5px;
-    transition: all 200ms ease-out;
-    -webkit-transition: all 200ms ease-out;
-  }
-}
-
 .uppercase{
   text-transform: uppercase;
 }

@@ -14,6 +14,29 @@ $( document ).ready(function() {
   var bottomYCoord = origH - 2.5;
   var offset = origW/2 - origH/2;
 
+  //smooth scroll to anchor link (this moves section down a bit so it doesn't overlap with header)
+  if (location.hash) {
+    setTimeout(function() {
+      scrollToSection($("#about-products"));
+    }, 1);
+  }
+
+  //handle anchor links
+  if($("#home-page").length){
+    $("nav  li > a.products-link").click(function(e){
+      e.preventDefault();
+
+      if(navOpen){
+        $navIcon.trigger("click");
+      }
+
+      if($("#about-products").length){
+        scrollToSection($("#about-products"));
+      }
+    });
+  }
+
+  //check page scroll on page load (will show mobile nav if necessary)
   checkScroll();
 
   //check the scroll - display mobile nav if necessary
@@ -36,6 +59,11 @@ $( document ).ready(function() {
       navOpen = false;
     }
   });
+
+  //smooth scroll for anchor links
+  function scrollToSection($section, time=1000){
+    $("html, body").animate({ scrollTop:$section.position().top - $("header").height() - 50  },time);
+  }
 
   //Display the mobile nav if user has scrolled on a small screen (< 768px)
   function checkScroll(){
