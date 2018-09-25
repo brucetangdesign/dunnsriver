@@ -38,6 +38,14 @@
     margin-bottom: 3rem;
     z-index: 100;
 
+    &:first-of-type{
+      margin-top: 235px;
+
+      @include breakpoint(xs-680){
+        margin-top: 146px;
+      }
+    }
+
     @include breakpoint(s){
       margin-bottom: 1.2rem;
     }

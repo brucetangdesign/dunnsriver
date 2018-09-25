@@ -174,6 +174,9 @@ section {
 .uppercase {
   text-transform: uppercase; }
 
+.stop-scroll {
+  overflow: hidden; }
+
 header {
   -webkit-display: flex;
   -moz-display: flex;
@@ -194,27 +197,41 @@ header {
   -ms-justify-content: space-between;
   -o-justify-content: space-between;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 132px;
   width: 100%;
   text-align: center;
   z-index: 3000;
   padding: 1.75rem 1.75rem 0px;
   max-width: 1920px; }
-  @media (max-width: 480px) {
-    header.fixed {
-      margin-bottom: 0; } }
-  @media (min-width: 681px) {
-    header.fixed {
-      position: absolute; } }
-  @media (min-width: 961px) {
-    header.fixed {
-      position: fixed; } }
+  header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d90b0d;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transition: all 200ms ease-out;
+    -webkit-transition: all 200ms ease-out; }
+    @media (min-width: 769px) {
+      header:before {
+        display: none; } }
+  header.scrolled {
+    padding: 0.5625rem 1.25rem; }
+    header.scrolled:before {
+      transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transition: all 300ms;
+      -webkit-transition: all 300ms; }
+  header.mobile-nav-open:before {
+    height: 100vh; }
 
 .logo-container {
   position: relative;
@@ -229,19 +246,45 @@ header {
     z-index: 1;
     background-image: url("../images/logo-bg-gradient.svg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
+    background-position: center;
     left: 50%;
     top: 53%;
     width: 154%;
     height: 256%;
     transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%); }
+  .logo-container .mobile-logo {
+    opacity: 0;
+    position: absolute;
+    width: 84px;
+    height: 45px; }
+    @media (max-width: 768px) {
+      .scrolled .logo-container .mobile-logo {
+        opacity: 1;
+        position: relative;
+        transition: opacity 300ms;
+        -webkit-transition: opacity 300ms; }
+      .mobile-nav-open .logo-container .mobile-logo {
+        opacity: 0; } }
+  .logo-container .desktop-logo {
+    opacity: 1; }
+    @media (max-width: 768px) {
+      .scrolled .logo-container .desktop-logo {
+        opacity: 0;
+        position: absolute; } }
   @media (max-width: 768px) {
     .logo-container {
-      width: 146px; } }
+      width: 146px; }
+      .scrolled .logo-container {
+        width: 84px; }
+        .scrolled .logo-container:after {
+          display: none; } }
   @media (max-width: 480px) {
     .logo-container {
-      width: 120px; } }
+      width: 120px; }
+      .scrolled .logo-container {
+        width: 84px; } }
 
 nav {
   font-family: "Vision Heavy";
@@ -253,7 +296,7 @@ nav {
       margin-left: 0; }
     nav ul.hr-list li:last-of-type {
       margin-right: 0; }
-    @media (max-width: 480px) {
+    @media (max-width: 680px) {
       nav ul.hr-list li {
         display: block;
         margin: 3px 0;
@@ -276,6 +319,42 @@ nav {
       -webkit-transition: all 200ms; }
     nav a.selected {
       pointer-events: none; }
+  @media (max-width: 768px) {
+    .scrolled nav {
+      position: absolute;
+      display: none; }
+    .mobile-nav-open nav {
+      -webkit-display: flex;
+      -moz-display: flex;
+      -ms-display: flex;
+      -o-display: flex;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      font-size: 40px; }
+      .mobile-nav-open nav ul.hr-list li {
+        text-align: center !important;
+        margin-top: 50px !important;
+        margin-bottom: 50px !important; }
+        .mobile-nav-open nav ul.hr-list li a {
+          text-transform: none; } }
 
 .usda-badge {
   position: absolute;
@@ -300,7 +379,60 @@ nav {
     .usda-badge {
       width: 3.125rem;
       height: 3.125rem;
-      margin-top: 8px; } }
+      margin-top: 8px; }
+      .scrolled .usda-badge {
+        opacity: 0;
+        position: absolute; } }
+
+.usda-badge-mobile {
+  opacity: 0;
+  position: absolute;
+  z-index: 3000;
+  left: 100%;
+  margin-left: 13px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/usda-badge-mobile.svg");
+  background-position: center;
+  background-size: contain; }
+  @media (max-width: 768px) {
+    .scrolled .usda-badge-mobile {
+      opacity: 1;
+      transition: opacity 300ms;
+      -webkit-transition: opacity 300ms; }
+    .mobile-nav-open .usda-badge-mobile {
+      opacity: 0; } }
+
+.mobile-nav-icon {
+  opacity: 0;
+  pointer-events: none;
+  width: 30px;
+  height: 25px;
+  z-index: 2000000; }
+  .mobile-nav-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #000000;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    transition: 0.2s stroke;
+    -webkit-transition: 0.2s stroke; }
+    .mobile-nav-icon svg line {
+      transform-origin: center;
+      stroke: #FFFFFF;
+      stroke-width: 5px; }
+  @media (max-width: 768px) {
+    .scrolled .mobile-nav-icon {
+      opacity: 1;
+      cursor: pointer;
+      pointer-events: all;
+      transition: opacity 300ms;
+      -webkit-transition: opacity 300ms; } }
 
 footer {
   -webkit-display: flex;
@@ -502,14 +634,13 @@ footer {
     .slide-main {
       min-height: 100vh;
       height: auto; } }
-  .slide-main.slide1 .bg-graphics {
-    background-image: url("../images/slide1-leaves.svg"); }
-  @media (min-width: 681px) {
-    .slide-main.slide1 {
-      margin-top: 3.5rem; } }
-  @media (min-width: 1189px) {
-    .slide-main.slide1 {
-      margin-top: auto; } }
+  .slide-main.slide1 {
+    margin-top: 150px; }
+    .slide-main.slide1 .bg-graphics {
+      background-image: url("../images/slide1-leaves.svg"); }
+    @media (max-width: 680px) {
+      .slide-main.slide1 {
+        margin-top: 80px; } }
   @media (max-width: 680px) {
     .slide-main.slide2 {
       margin-bottom: 7rem; } }
@@ -576,8 +707,7 @@ footer {
       -o-flex-direction: column;
       flex-direction: column; }
       .slide-content.slide1 {
-        padding-top: 0;
-        margin-top: -40px; } }
+        padding-top: 0; } }
 
 .slide-image-container {
   -webkit-display: flex;
@@ -764,10 +894,6 @@ footer {
   @media (max-width: 768px) {
     .slide-main.slide1 {
       min-height: 0; } }
-  @media (max-width: 680px) {
-    .slide-main.slide1 {
-      padding-top: 0;
-      margin-top: -20px; } }
 
 #about-products.slide-main {
   display: block;
@@ -1407,6 +1533,11 @@ table.nutritional-chart {
     text-align: center;
     margin-bottom: 3rem;
     z-index: 100; }
+    #about-page section:first-of-type {
+      margin-top: 235px; }
+      @media (max-width: 680px) {
+        #about-page section:first-of-type {
+          margin-top: 146px; } }
     @media (max-width: 768px) {
       #about-page section {
         margin-bottom: 1.2rem; } }

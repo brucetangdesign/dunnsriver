@@ -3,7 +3,6 @@
 <?php
 //Page title
 $pageTitle = "Sweet leaf Tea";
-$headerClass="fixed";
 $footerClass="fixed";
 $page = "home-page";
 ?>

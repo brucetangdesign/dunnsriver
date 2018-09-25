@@ -174,18 +174,15 @@
   }
 
   &.slide1{
+    margin-top: 150px;
+
     .bg-graphics{
       background-image: url('../images/slide1-leaves.svg');
     }
 
-    @include breakpoint(xs-680-up){
-      margin-top: 3.5rem;
+    @include breakpoint(xs-680){
+      margin-top: 80px;
     }
-
-    @include breakpoint(m-l-up){
-      margin-top: auto;
-    }
-
   }
 
   &.slide2{
@@ -250,7 +247,7 @@
 
     &.slide1{
       padding-top: 0;
-      margin-top: -40px;
+      //margin-top: -40px;
     }
   }
 }
@@ -452,11 +449,6 @@
 
   @include breakpoint(s){
     min-height: 0;
-  }
-
-  @include breakpoint(xs-680){
-    padding-top: 0;
-    margin-top: -20px;
   }
 }
 
