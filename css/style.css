@@ -153,6 +153,8 @@ section {
   text-transform: uppercase; }
 
 .stop-scroll {
+  position: absolute;
+  top: 0;
   overflow: hidden; }
 
 header {

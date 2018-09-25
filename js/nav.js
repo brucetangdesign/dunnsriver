@@ -13,6 +13,7 @@ $( document ).ready(function() {
   var centerYCoord = origH/2;
   var bottomYCoord = origH - 2.5;
   var offset = origW/2 - origH/2;
+  var windowScrollTop;
 
   //smooth scroll to anchor link (this moves section down a bit so it doesn't overlap with header)
   if (location.hash) {
@@ -47,13 +48,17 @@ $( document ).ready(function() {
   //Hamburger button
   $navIcon.click(function(){
     if(!navOpen){
+      windowScrollTop = $(window).scrollTop();
       $("html,body").addClass("stop-scroll");
+      $("html,body").css("margin-top",windowScrollTop+"px");
       $header.addClass("mobile-nav-open");
       transformNavIconToCloseIcon();
       navOpen = true;
     }
     else{
       $("html,body").removeClass("stop-scroll");
+      $("html,body").css("margin-top","auto");
+      $(window).scrollTop(windowScrollTop);
       $header.removeClass("mobile-nav-open");
       transformCloseIconToNavIcon();
       navOpen = false;
@@ -75,7 +80,7 @@ $( document ).ready(function() {
         }
       }
       else{
-        if(scrolled){
+        if(scrolled && !navOpen){
           $header.removeClass("scrolled");
           scrolled = false;
         }
