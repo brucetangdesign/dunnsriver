@@ -751,7 +751,7 @@ footer {
     max-height: 856px;
     min-width: 358px;
     min-height: 491px;
-    background-image: url("../images/slide1-bottle-mint.png");
+    background-image: url("../images/slide1-bottle-original.png");
     background-position: top; }
     @media (max-width: 480px) {
       .slide1 .slide-image {
@@ -1206,8 +1206,8 @@ table.nutritional-chart {
   z-index: 2;
   background-size: contain;
   background-repeat: no-repeat; }
-  .bottle.original {
-    background-image: url("../images/slide1-bottle-original.png");
+  .bottle.mint {
+    background-image: url("../images/slide1-bottle-mint.png");
     top: 29%;
     left: 23%;
     width: 25.7vw;
@@ -1217,20 +1217,20 @@ table.nutritional-chart {
     max-width: 30.9375rem;
     max-height: 35.0625rem; }
     @media (max-width: 960px) {
-      .bottle.original {
+      .bottle.mint {
         left: 17%; } }
     @media (max-width: 768px) {
-      .bottle.original {
+      .bottle.mint {
         top: 46%;
         left: 12%; } }
     @media (max-width: 680px) {
-      .bottle.original {
+      .bottle.mint {
         min-width: 165px;
         min-height: 186px;
         top: 48%;
         left: 7%; } }
     @media (max-width: 480px) {
-      .bottle.original {
+      .bottle.mint {
         left: 3%; } }
   .bottle.peach {
     background-image: url("../images/slide1-bottle-peach.png");

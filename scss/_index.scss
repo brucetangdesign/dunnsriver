@@ -297,7 +297,7 @@
     max-height: 856px;
     min-width: 358px;
     min-height: 491px;
-    background-image: url('../images/slide1-bottle-mint.png');
+    background-image: url('../images/slide1-bottle-original.png');
     background-position: top;
 
     @include breakpoint(xs){
@@ -872,8 +872,8 @@ table.nutritional-chart{
   background-size: contain;
   background-repeat: no-repeat;
 
-  &.original{
-    background-image: url('../images/slide1-bottle-original.png');
+  &.mint{
+    background-image: url('../images/slide1-bottle-mint.png');
     top: 29%;
     left: 23%;
     width: 25.7vw;

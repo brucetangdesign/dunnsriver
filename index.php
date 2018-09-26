@@ -42,7 +42,7 @@ $page = "home-page";
       <div class="bottle honey rellax"></div>
       <div class="bg-lemon rellax" data-rellax-speed="1"></div>
       <div class="bg-orange rellax" data-rellax-speed="3"></div>
-      <div class="bottle original rellax" data-rellax-speed="1"></div>
+      <div class="bottle mint rellax" data-rellax-speed="1"></div>
       <div class="center"></div>
       <div class="slide-content">
         <div class="slide-image-container" data-rellax-speed="3">
