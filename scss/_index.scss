@@ -793,6 +793,12 @@ table.nutritional-chart{
         top: 50%;
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
+        width: 5.8vw;
+        height: 5.3vw;
+        max-width: 56px;
+        max-height: 51px;
+        min-width: 30px;
+        min-height: 27px;
 
         @include breakpoint(xs-680){
           left: 100px;
@@ -802,30 +808,18 @@ table.nutritional-chart{
       &.sweet{
         &:after{
           background-image: url("../images/chart-cubes-sweet.png");
-          width: 5.8vw;
-          height: 5.3vw;
-          max-width: 56px;
-          max-height: 51px;
         }
       }
 
       &.semisweet{
         &:after{
           background-image: url("../images/chart-cubes-semisweet.png");
-          width: 5.3vw;
-          height: 4.58vw;
-          max-width: 51px;
-          max-height: 44px;
         }
       }
 
       &.unsweet{
         &:after{
           background-image: url("../images/chart-cubes-unsweet.png");
-          width: 3.54vw;
-          height: 4.166vw;
-          max-width: 34px;
-          max-height: 40px;
         }
       }
     }

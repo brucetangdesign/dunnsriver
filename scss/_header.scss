@@ -37,7 +37,7 @@ header{
   }
 
   &.scrolled{
-    padding: getRem(9px) getRem(20px);
+    padding: 10px 20px 9px;
 
     &:before{
       transform: translateY(0);

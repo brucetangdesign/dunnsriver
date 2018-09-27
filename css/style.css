@@ -204,7 +204,7 @@ header {
       header:before {
         display: none; } }
   header.scrolled {
-    padding: 0.5625rem 1.25rem; }
+    padding: 10px 20px 9px; }
     header.scrolled:before {
       transform: translateY(0);
       -webkit-transform: translateY(0);
@@ -1160,28 +1160,22 @@ table.nutritional-chart {
       left: 144px;
       top: 50%;
       transform: translateY(-50%);
-      -webkit-transform: translateY(-50%); }
+      -webkit-transform: translateY(-50%);
+      width: 5.8vw;
+      height: 5.3vw;
+      max-width: 56px;
+      max-height: 51px;
+      min-width: 30px;
+      min-height: 27px; }
       @media (max-width: 680px) {
         table.nutritional-chart td span.chart-flavor:after {
           left: 100px; } }
     table.nutritional-chart td span.chart-flavor.sweet:after {
-      background-image: url("../images/chart-cubes-sweet.png");
-      width: 5.8vw;
-      height: 5.3vw;
-      max-width: 56px;
-      max-height: 51px; }
+      background-image: url("../images/chart-cubes-sweet.png"); }
     table.nutritional-chart td span.chart-flavor.semisweet:after {
-      background-image: url("../images/chart-cubes-semisweet.png");
-      width: 5.3vw;
-      height: 4.58vw;
-      max-width: 51px;
-      max-height: 44px; }
+      background-image: url("../images/chart-cubes-semisweet.png"); }
     table.nutritional-chart td span.chart-flavor.unsweet:after {
-      background-image: url("../images/chart-cubes-unsweet.png");
-      width: 3.54vw;
-      height: 4.166vw;
-      max-width: 34px;
-      max-height: 40px; }
+      background-image: url("../images/chart-cubes-unsweet.png"); }
   @media (max-width: 1188px) {
     table.nutritional-chart {
       width: 75vw; } }
